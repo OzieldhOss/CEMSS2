@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CEMSS - Formulario de Admisión</title>
+  <link rel="stylesheet" href="Estilos_inicio.css">
+  <link rel="stylesheet" href="Formulario_R.css">
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <div class="logo"><img src="logo.jpg" class="logo-cemss">CEM<span>SS</span></div>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="window.location.href='Inicio.html'">Inicio</button>
+        <button class="nav-btn" onclick="window.location.href='Admision.html'">Admisión</button>
+        <button class="nav-btn" onclick="window.location.href='Carreras.html'">Carreras</button>
+        <button class="nav-btn" onclick="window.location.href='Contacto.html'">Contacto</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="dashboard-container">
+    <main class="main-content">
+      <div class="welcome-banner">
+        <h1>Formulario de Admisión</h1>
+        <p>Completa todos los campos para solicitar tu ingreso a CEMSS</p>
+      </div>
+      
+      <form id="formulario-admision" class="formulario-admision">
+        <!-- Sección de Información Personal -->
+        <fieldset class="form-section">
+          <legend class="section-title">Información Personal</legend>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombres Completos*</label>
+              <input type="text" id="nombre" name="nombre" class="input-field" required>
+              <span class="error-message">Este campo es obligatorio</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="apellido">Apellidos Completos*</label>
+              <input type="text" id="apellido" name="apellido" class="input-field" required>
+              <span class="error-message">Este campo es obligatorio</span>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fecha-nacimiento">Fecha de Nacimiento*</label>
+              <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" class="input-field" required>
+              <span class="error-message">Este campo es obligatorio</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="genero">Género*</label>
+              <select id="genero" name="genero" class="input-field" required>
+                <option value="">Seleccionar...</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+                <option value="prefiero-no-decir">Prefiero no decir</option>
+              </select>
+              <span class="error-message">Este campo es obligatorio</span>
+            </div>
+          </div>
+        </fieldset>
+        
+        <!-- Sección de Contacto -->
+        <fieldset class="form-section">
+          <legend class="section-title">Información de Contacto</legend>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefono">Teléfono casa*</label>
+              <input type="tel" id="telefono" name="telefono" class="input-field" required>
+              <span class="error-message">Este campo es obligatorio</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="celular">Celular</label>
+              <input type="tel" id="celular" name="celular" class="input-field">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Correo Electrónico*</label>
+              <input type="email" id="email" name="email" class="input-field" required>
+              <span class="error-message">Ingresa un correo electrónico válido</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email-confirm">Confirmar Correo*</label>
+              <input type="email" id="email-confirm" name="email-confirm" class="input-field" required>
+              <span class="error-message">Los correos deben coincidir</span>
+            </div>
+          </div>
+        </fieldset>
+        
+        <!-- Sección Académica -->
+        <fieldset class="form-section">
+          <legend class="section-title">Información Académica</legend>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="colegio">Colegio/Institución de Procedencia*</label>
+              <input type="text" id="colegio" name="colegio" class="input-field" required>
+              <span class="error-message">Este campo es obligatorio</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="titulo">Título Obtenido*</label>
+              <input type="text" id="titulo" name="titulo" class="input-field" required>
+              <span class="error-message">Este campo es obligatorio</span>
+            </div>
+          </div>
+        </fieldset>
+        
+        <!-- Sección de Documentos -->
+<fieldset class="form-section compact-documents">
+  <legend class="section-title">Documentos Adjuntos</legend>
+  
+  <!-- Fotografía -->
+  <div class="document-item">
+    <label for="foto">Fotografía Reciente*</label>
+    <div class="file-upload">
+      <input type="file" id="foto" name="foto" accept="image/*" required>
+      <span class="file-status">Sin archivo seleccionado</span>
+    </div>
+  </div>
+  
+  <!-- Certificado -->
+  <div class="document-item">
+    <label for="certificado-notas">Certificado de secundaria*</label>
+    <div class="file-upload">
+      <input type="file" id="certificado-notas" name="certificado-notas" accept=".pdf,.jpg,.png" required>
+      <span class="file-status">Sin archivo seleccionado</span>
+    </div>
+    <div class="prorroga-option">
+      <input type="checkbox" id="solicitar-prorroga" name="solicitar-prorroga">
+      <label for="solicitar-prorroga">No cuento con mi certificado, solicito prórroga</label>
+    </div>
+  </div>
+  
+  <!-- CURP -->
+  <div class="document-item">
+    <label for="curp">CURP*</label>
+    <div class="file-upload">
+      <input type="file" id="curp" name="curp" accept=".pdf,.jpg,.png" required>
+      <span class="file-status">Sin archivo seleccionado</span>
+    </div>
+  </div>
+  
+  <!-- Acta de Nacimiento -->
+  <div class="document-item">
+    <label for="acta-nacimiento">Acta de Nacimiento*</label>
+    <div class="file-upload">
+      <input type="file" id="acta-nacimiento" name="acta-nacimiento" accept=".pdf,.jpg,.png" required>
+      <span class="file-status">Sin archivo seleccionado</span>
+    </div>
+  </div>
+  
+  <!-- INE -->
+  <div class="document-item">
+    <label for="ine">Copia de INE* <span class="hint-text">(Si eres menor de edad, copia de la INE de tu tutor)</span></label>
+    <div class="file-upload">
+      <input type="file" id="ine" name="ine" accept=".pdf,.jpg,.png" required>
+      <span class="file-status">Sin archivo seleccionado</span>
+    </div>
+  </div>
+</fieldset>
+        
+        <!-- Sección de Términos y Condiciones -->
+        <fieldset class="form-section">
+          <div class="form-group full-width">
+            <div class="checkbox-group">
+              <input type="checkbox" id="terminos" name="terminos" class="input-checkbox" required>
+              <label for="terminos">Acepto los <a href="#">términos y condiciones</a> y autorizo el tratamiento de mis datos personales*</label>
+              <span class="error-message">Debes aceptar los términos y condiciones</span>
+            </div>
+          </div>
+        </fieldset>
+        
+        <!-- Botones de envío -->
+        <div class="form-actions">
+          <button type="reset" class="form-btn secondary">Limpiar Formulario</button>
+          <button type="submit" class="form-btn primary">Enviar Solicitud</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="Formulario_R.js"></script>
+</body>
+</html>

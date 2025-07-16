@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Perfil - CEMSS</title>
+  <link rel="stylesheet" href="Estilos_inicio.css">
+  <link rel="stylesheet" href="Perfil.css">
+  <link rel="stylesheet" href="Alumnos.css">
+</head>
+<body>
+ <!-- Barra de navegación (se mantienen las clases originales) -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-buttons desktop-menu">
+      <a href="Alumnos.html">
+      <button class="nav-btn" id="plan-btn">Pizarra</button>
+      </a>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle" id="admision-btn">Califiaciones</button>
+        <div class="dropdown-menu">
+          <a href="Calificaciones_Actual.html" class="dropdown-item">Cuatrimestre actual</a>
+          <a href="Calificaciones_historial.html" class="dropdown-item">Historial academico</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Alumnos.html" class="mobile-menu-item">Pizarra</a>
+        <a href="Calificaciones_Actual.html" class="mobile-menu-item">Cuatrimestre actual</a>
+        <a href="Calificaciones_historial.html" class="mobile-menu-item">Historial academico</a>
+    </div>
+  </div>
+</nav>  
+  </div>
+
+  <!-- Sección de credencial -->
+  <section class="credential-section">
+    <div class="credential-card">
+      <!-- Parte superior: Foto y datos personales -->
+      <div class="credential-header">
+        <div class="credential-photo">
+          <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Foto de perfil" class="profile-image">
+          <button class="edit-image-btn">✏️ Cambiar foto</button>
+        </div>
+        <div class="credential-info">
+          <h1>Credencial del Alumno</h1>
+          <div class="info-grid">
+            <div class="info-group">
+              <label>Nombre:</label>
+              <p class="info-value">Juan Carlos Pérez López</p>
+            </div>
+            <div class="info-group">
+              <label>Matrícula:</label>
+              <p class="info-value">CEMSS20251234</p>
+            </div>
+            <div class="info-group">
+              <label>Cuatrimestre:</label>
+              <p class="info-value">Tercer Cuatrimestre (2025)</p>
+            </div>
+            <div class="info-group">
+              <label>Contacto:</label>
+              <p class="info-value">55 1234 5678<br>juan.perez@email.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parte inferior: Documentos y progreso -->
+      <div class="credential-footer">
+        <div class="documents-section">
+          <h3>Documentos Registrados</h3>
+          <div class="documents-grid">
+            <div class="document-item">
+              <div class="document-icon">📄</div>
+              <p class="document-name">CURP</p>
+              <span class="document-status verified">✔️ Verificado</span>
+            </div>
+            <div class="document-item">
+              <div class="document-icon">📄</div>
+              <p class="document-name">Acta de Nacimiento</p>
+              <span class="document-status verified">✔️ Verificado</span>
+            </div>
+            <div class="document-item">
+              <div class="document-icon">📄</div>
+              <p class="document-name">Copia de INE</p>
+              <span class="document-status pending">⌛ Pendiente</span>
+            </div>
+            <div class="document-item">
+              <div class="document-icon">📄</div>
+              <p class="document-name">Certificado de Secundaria</p>
+              <span class="document-status verified">✔️ Verificado</span>
+            </div>
+          </div>
+        </div>
+        <div class="progress-section">
+          <h3>Progreso Académico</h3>
+          <div class="progress-item">
+            <p>Avance General</p>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 65%;"></div>
+            </div>
+            <span class="progress-percent">65%</span>
+          </div>
+          <div class="progress-item">
+            <p>Cuatrimestre Actual</p>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 40%;"></div>
+            </div>
+            <span class="progress-percent">40%</span>
+          </div>
+          <button class="edit-profile-btn">Editar Perfil</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="Menu.js"></script>
+</body>
+</html>

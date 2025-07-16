@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEMSS - Plan de Estudios</title>
+  <link rel="stylesheet" href="Plan_estudios.css">
+  <link rel="stylesheet" href="Estilos_inicio.css">
+</head>
+<body>
+  <canvas id="animatedBackground"></canvas>
+<!-- Barra de navegación -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-buttons desktop-menu">
+      <a href="Inicio.html">
+      <button class="nav-btn" id="plan-btn">Inicio</button>
+      </a>
+      <a href="Inf_admision.html">
+      <button class="nav-btn" id="login-btn">Admisiones</button>
+      </a>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle" id="admision-btn">☰ Menu</button>
+        <div class="dropdown-menu">
+          <a href="Formulario_Alumnos.html" class="dropdown-item">Alumnos</a>
+          <a href="Formulario_Maestro.html" class="dropdown-item">Maestros</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Inf_admision.html" class="mobile-menu-item">Admisiones</a>
+        <a href="plan_estudios.html" class="mobile-menu-item">Plan de Estudios</a>
+      <a href="Formulario_Alumnos.html" class="mobile-menu-item">Alumnos</a>
+      <a href="Formulario_Maestro.html" class="mobile-menu-item">Maestros</a>
+    </div>
+  </div>
+</nav>  
+  </div>
+
+ <div class="pl-content-overlay">
+    <!-- Hero Section -->
+    <section class="pl-hero">
+      <h1 class="pl-hero-title" style="
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
+      ">Plan de Estudios Cuatrimestral</h1>
+      <p class="pl-hero-subtitle"  style="
+         text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
+        ;">Conoce nuestra estructura académica diseñada para tu éxito</p>
+    </section>
+
+    <!-- Sección de información general -->
+    <section class="pl-section">
+      <h2 class="pl-section-title">Estructura del Plan de Estudios</h2>
+      <div class="pl-features-grid">
+        <div class="pl-feature-card">
+          <div class="pl-feature-icon">📅</div>
+          <h3 class="pl-feature-title">Duración</h3>
+          <p class="pl-feature-text">6 cuatrimestres (2 años).</p>
+        </div>
+        <div class="pl-feature-card">
+          <div class="pl-feature-icon">📚</div>
+          <h3 class="pl-feature-title">Materias</h3>
+          <p class="pl-feature-text">Total de 42 materias distribuidas estratégicamente.</p>
+        </div>
+        <div class="pl-feature-card">
+          <div class="pl-feature-icon">🎯</div>
+          <h3 class="pl-feature-title">Enfoque</h3>
+          <p class="pl-feature-text">Constructivista-Humanista.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de cuatrimestres -->
+    <section class="pl-quarters-section">
+      <h2 class="pl-section-title">Plan de estudios</h2>
+      <div class="pl-quarters-grid">
+        <!-- Cuatrimestre 1-5 -->
+        <div class="pl-quarter-card">
+          <h3 class="pl-quarter-title">Cuatrimestres 1-5</h3>
+          <div class="pl-quarter-details">
+            <p class="pl-quarter-text"><strong>8 materias</strong> por cuatrimestre</p>
+            <p class="pl-quarter-text"><strong>2 materias</strong> por mes</p>
+            <p class="pl-quarter-text">Evaluaciones por bloque</p>
+            <p class="pl-quarter-text">Actividades complementarias</p>
+          </div>
+        </div>
+        
+        <!-- Cuatrimestre 6 -->
+        <div class="pl-quarter-card">
+          <h3 class="pl-quarter-title">Cuatrimestre 6</h3>
+          <div class="pl-quarter-details">
+            <p class="pl-quarter-text"><strong>2 materias</strong> primeros 3 parciales</p>
+            <p class="pl-quarter-text"><strong>1 materia</strong> último parcial</p>
+            <p class="pl-quarter-text">Enfoque en proyectos finales</p>
+            <p class="pl-quarter-text">Preparación para titulación</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso de aprendizaje -->
+    <section class="pl-process-section">
+      <h2 class="pl-section-title">Proceso de Aprendizaje</h2>
+      <div class="pl-steps-container">
+        <div class="pl-step">
+          <div class="pl-step-number">1</div>
+          <div class="pl-step-content">
+            <h3 class="pl-step-title">Material didáctico</h3>
+            <p class="pl-step-text">Material completo para cada asignatura  , con explicaciones claras y ejemplos prácticos.</p>
+          </div>
+        </div>
+        <div class="pl-step">
+          <div class="pl-step-number">2</div>
+          <div class="pl-step-content">
+            <h3 class="pl-step-title">Actividades Formativas</h3>
+            <p class="pl-step-text">Ejercicios y tareas diseñadas para fortalecer el aprendizaje y alcanzar satisfactoriamente cada progresión.</p>
+          </div>
+        </div>
+        <div class="pl-step">
+          <div class="pl-step-number">3</div>
+          <div class="pl-step-content">
+            <h3 class="pl-step-title">Evaluación por Progresiones</h3>
+            <p class="pl-step-text">Evaluación al final de cada progesión para medir tu comprensión de los temas.</p>
+          </div>
+        </div>
+        <div class="pl-step">
+          <div class="pl-step-number">4</div>
+          <div class="pl-step-content">
+            <h3 class="pl-step-title">Examenes Parciales</h3>
+            <p class="pl-step-text">Evaluación integral que abarca todas las progesiones por materia.</p>
+          </div>
+        </div>
+        <div class="pl-step">
+          <div class="pl-step-number">5</div>
+          <div class="pl-step-content">
+            <h3 class="pl-step-title">Actividad Extra</h3>
+            <p class="pl-step-text">Oportunidad para obtener puntos adicionales mediante proyectos o trabajos especiales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios adicionales -->
+    <section class="pl-benefits-section">
+      <h2 class="pl-section-title">Beneficios de Nuestro Plan de Estudios</h2>
+      <div class="pl-features-grid">
+        <div class="pl-feature-card">
+          <div class="pl-feature-icon">⏱️</div>
+          <h3 class="pl-feature-title">Flexibilidad</h3>
+          <p class="pl-feature-text">Diseño cuatrimestral que te permite avanzar a tu ritmo.</p>
+        </div>
+        <div class="pl-feature-card">
+          <div class="pl-feature-icon">📊</div>
+          <h3 class="pl-feature-title">Evaluación Continua</h3>
+          <p class="pl-feature-text">Seguimiento constante de tu progreso académico.</p>
+        </div>
+        <div class="pl-feature-card">
+          <div class="pl-feature-icon">➕</div>
+          <h3 class="pl-feature-title">Puntos Extra</h3>
+          <p class="pl-feature-text">Oportunidad de mejorar tu calificación con actividades adicionales.</p>
+        </div>
+        <div class="pl-feature-card">
+          <div class="pl-feature-icon">👨‍🏫</div>
+          <h3 class="pl-feature-title">Soporte Docente</h3>
+          <p class="pl-feature-text">Asesoría personalizada durante todo tu proceso de aprendizaje.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Llamado a la acción -->
+    <section class="pl-cta-section">
+      <h2 class="pl-section-title">¿Listo para comenzar?</h2>
+      <p class="pl-cta-text">Inscríbete ahora y forma parte de nuestra comunidad educativa</p>
+      <button class="pl-cta-btn" onclick="window.location.href='Formulario_registro.html'">Inscríbete Ahora</button>
+    </section>
+  </div>
+
+    <div class="footer-container">
+  <div class="footer-content">
+    <!-- Sección de Logo y Redes -->
+    <div class="footer-section">
+       <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+      <h3>Síguenos</h3>
+      <div class="social-links">
+        <a href="#" class="social-link">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="#" class="social-link">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+
+    <!-- Sección de Contacto -->
+    <div class="footer-section">
+      <h3>Contacto</h3>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> contacto@cemss.edu.mx</p>
+        <p><i class="fas fa-phone"></i> 55 1234 5678</p>
+        <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 - 18:00 hrs</p>
+      </div>
+    </div>
+
+    <!-- Sección Conócenos -->
+    <div class="footer-section">
+      <h3>Conócenos</h3>
+      <ul class="footer-links">
+        <li><a href="conocenos.html#quienes-somos"><i class="fas fa-users"></i> Quiénes somos</a></li>
+        <li><a href="conocenos.html#vision"><i class="fas fa-eye"></i> Nuestra visión</a></li>
+        <li><a href="conocenos.html#mision"><i class="fas fa-bullseye"></i> Misión</a></li>
+        <li><a href="conocenos.html#valores"><i class="fas fa-gem"></i> Valores</a></li>
+        <li><a href="conocenos.html#historia"><i class="fas fa-history"></i> Historia</a></li>
+      </ul>
+    </div>
+
+    <!-- Sección de Enlaces Rápidos -->
+    <div class="footer-section">
+      <h3>Enlaces rápidos</h3>
+      <ul class="footer-links">
+        <li><a href="#"><i class="fas fa-shield-alt"></i> Aviso de privacidad</a></li>
+        <li><a href="#"><i class="fas fa-search"></i> Transparencia</a></li>
+        <li><a href="#"><i class="fas fa-user-shield"></i> Protocolo de seguridad</a></li>
+        <li><a href="#"><i class="fas fa-graduation-cap"></i> Oferta educativa</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer inferior -->
+  <div class="footer-bottom">
+    <div class="copyright">
+      <p>© 2023 CEMSS - Centro de Estudios Modernos Superiores. Todos los derechos reservados.</p>
+    </div>
+    <div class="legal-links">
+      <a href="#">Términos y condiciones</a> | 
+      <a href="#">Política de privacidad</a> | 
+      <a href="#">Mapa del sitio</a>
+    </div>
+  </div>
+</div>
+  <script src="plan_estudio.js"></script>
+</body>
+</html>

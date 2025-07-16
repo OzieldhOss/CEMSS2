@@ -1,0 +1,463 @@
+/* ===== ESTILOS MINIMALISTAS CON ENCABEZADO LIMPIO ===== */
+/* Paleta de azules profesionales */
+:root {
+  --adm-primary: #2c5282;
+  --adm-primary-light: #4299e1;
+  --adm-primary-lighter: #ebf8ff;
+  --adm-primary-dark: #1a365d;
+  --adm-dark: #1a202c;
+  --adm-gray: #4a5568;
+  --adm-light-gray: #f7fafc;
+  --adm-white: #ffffff;
+  --adm-success: #38a169;
+  --adm-warning: #dd6b20;
+  --adm-alert: #e53e3e;
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--adm-dark);
+  background-color: var(--adm-light-gray);
+  overflow-x: hidden;
+}
+
+/* Estructura común */
+.adm-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.adm-section {
+  scroll-margin-top: 80px;
+  padding: 6rem 0;
+  position: relative;
+}
+
+.adm-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--adm-dark);
+  position: relative;
+  display: inline-block;
+}
+
+.adm-section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--adm-primary);
+  margin-top: 15px;
+  border-radius: 2px;
+}
+
+.adm-section-description {
+  font-size: 1.15rem;
+  color: var(--adm-gray);
+  max-width: 700px;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+/* Hero Section - Versión Minimalista */
+.adm-hero-section {
+  margin-top: 80px;
+  padding: 5rem 0 4rem;
+  background: var(--adm-primary);
+  color: var(--adm-white);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.adm-hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.adm-hero-content {
+  text-align: center;
+}
+
+.adm-hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.adm-hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Proceso de Admisión */
+.adm-process-section {
+  background-color: var(--adm-white);
+  padding: 6rem 0;
+}
+
+.adm-steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.adm-step-card {
+  background: var(--adm-primary-lighter);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--adm-primary);
+  transition: var(--transition);
+  position: relative;
+}
+
+.adm-step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.adm-step-number {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--adm-primary);
+  color: var(--adm-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.adm-step-title {
+  font-size: 1.4rem;
+  margin: 1.5rem 0 1rem 0;
+  color: var(--adm-dark);
+}
+
+.adm-step-text {
+  color: var(--adm-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.adm-step-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--adm-primary);
+  color: var(--adm-white);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.adm-step-button:hover {
+  background-color: var(--adm-primary-dark);
+}
+
+/* Requisitos */
+.adm-requirements-section {
+  background-color: var(--adm-primary-lighter);
+  padding: 6rem 0;
+}
+
+.adm-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.adm-docs-card {
+  background: var(--adm-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.adm-docs-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.adm-docs-title {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--adm-primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.adm-docs-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.adm-docs-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.adm-docs-list li:last-child {
+  border-bottom: none;
+}
+
+.adm-docs-list i {
+  color: var(--adm-primary);
+  min-width: 20px;
+}
+
+/* Estilo para el ítem con botón */
+.doc-with-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certificate-btn {
+  background: none;
+  border: none;
+  color: var(--adm-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  transition: var(--transition);
+  margin-left: 1rem;
+  white-space: nowrap;
+  border: 1px solid var(--adm-primary);
+}
+
+.certificate-btn:hover {
+  background-color: var(--adm-primary-lighter);
+}
+
+/* Caso especial (oculto inicialmente) */
+.special-case-info {
+  display: none;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  background-color: rgba(234, 88, 12, 0.1);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--adm-warning);
+  color: var(--adm-dark);
+}
+
+.special-case-info.show {
+  display: block;
+}
+
+.special-case-info i {
+  color: var(--adm-warning);
+  margin-right: 0.5rem;
+}
+
+.adm-cta-container {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.adm-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 2rem;
+  background-color: var(--adm-white);
+  color: var(--adm-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.adm-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f0f6ff;
+}
+
+/* Periodos Académicos */
+.adm-quarters-section {
+  background-color: var(--adm-white);
+  padding: 6rem 0;
+}
+
+.adm-quarters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.adm-quarter-card {
+  background: var(--adm-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid var(--adm-primary);
+  transition: var(--transition);
+  position: relative;
+}
+
+.adm-quarter-card.adm-current-quarter {
+  border-top: 4px solid var(--adm-success);
+}
+
+.adm-quarter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.adm-quarter-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--adm-dark);
+}
+
+.adm-quarter-dates {
+  color: var(--adm-gray);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.adm-quarter-status {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.adm-status-past {
+  background: rgba(113, 128, 150, 0.1);
+  color: var(--adm-gray);
+}
+
+.adm-status-current {
+  background: rgba(56, 161, 105, 0.1);
+  color: var(--adm-success);
+}
+
+.adm-status-upcoming {
+  background: rgba(66, 153, 225, 0.1);
+  color: var(--adm-primary);
+}
+
+.adm-quarter-button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--adm-success);
+  color: var(--adm-white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--transition);
+  margin-top: 1rem;
+}
+
+.adm-quarter-button:hover {
+  background-color: #2f855a;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .adm-hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .adm-section {
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .adm-hero-section {
+    padding: 4rem 0 3rem;
+    margin-top: 70px;
+  }
+  
+  .adm-hero-title {
+    font-size: 2rem;
+  }
+  
+  .adm-section-title {
+    font-size: 2rem;
+  }
+  
+  .adm-quarters-grid,
+  .adm-docs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .adm-steps-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .adm-hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .adm-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .adm-section-title {
+    font-size: 1.8rem;
+  }
+  
+  .adm-section-description {
+    font-size: 1rem;
+  }
+  
+  .adm-steps-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .doc-with-btn {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .certificate-btn {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    align-self: flex-end;
+  }
+}

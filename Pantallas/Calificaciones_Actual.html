@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEMSS - Calificaciones Actuales</title>
+  <link rel="stylesheet" href="Califiaciones.css">
+  <link rel="stylesheet" href="Estilos_inicio.css">
+</head>
+<body>
+  <!-- Barra de navegación (se mantienen las clases originales) -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-buttons desktop-menu">
+      <a href="Perfil.html">
+      <button class="nav-btn" id="login-btn">Perfil</button>
+      </a>
+      <a href="Alumnos.html">
+      <button class="nav-btn" id="plan-btn">Pizarra</button>
+      </a>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle" id="admision-btn">Califiaciones</button>
+        <div class="dropdown-menu">
+          <a href="Calificaciones_Actual.html" class="dropdown-item">Cuatrimestre actual</a>
+          <a href="Calificaciones_historial.html" class="dropdown-item">Historial academico</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Perfil.html" class="mobile-menu-item">Perfil</a>
+        <a href="Alumnos.html" class="mobile-menu-item">Pizarra</a>
+      <a href="Calificaciones_Actual.html" class="mobile-menu-item">Cuatrimestre actual</a>
+      <a href="Calificaciones_historial.html" class="mobile-menu-item">Historial academico</a>
+    </div>
+  </div>
+</nav>  
+  </div>
+
+  <div class="academic-wrapper">
+    <div class="grade-container">
+      <h1 class="grade-title">HISTORIAL ACADÉMICO</h1>
+      
+      <div class="student-data">
+        <div class="data-row">
+          <span class="data-label">NOMBRE:</span>
+          <span class="data-value">Ernesto Pérez Barrios</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Matricula:</span>
+          <span class="data-value">22PBH0124M</span>
+        </div>
+
+      <h2 class="section-heading">PLAN DE ESTUDIOS - CUATRIMESTRE ACTUAL</h2>
+      
+      <div class="current-term">
+        <div class="term-header">
+          <h3>TERCER CUATRIMESTRE</h3>
+          <div class="term-info">CICLO ESCOLAR 2024-2025 C</div>
+        </div>
+        
+       <div class="marks-table">
+        <div class="table-head">
+          <div class="subject-cell">MATERIA</div>
+          <div class="mark-cell">PARCIAL 1</div>
+          <div class="mark-cell">PARCIAL 2</div>
+          <div class="mark-cell">PARCIAL 3</div>
+          <div class="mark-cell">PROMEDIO</div>
+          <div class="state-cell">ESTADO</div>
+        </div>
+        
+        <div class="table-line">
+          <div class="subject-cell">MATEMÁTICAS III</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell final-average">0.0</div>
+          <div class="state-cell">EN CURSO</div>
+        </div>
+        
+        <div class="table-line">
+          <div class="subject-cell">BIOLOGÍA I</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell final-average">0.0</div>
+          <div class="state-cell">EN CURSO</div>
+        </div>
+        
+        <div class="table-line">
+          <div class="subject-cell">FÍSICA I</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell final-average">0.0</div>
+          <div class="state-cell">EN CURSO</div>
+        </div>
+        
+        <div class="table-line">
+          <div class="subject-cell">HISTORIA DE MÉXICO I</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell final-average">0.0</div>
+          <div class="state-cell">EN CURSO</div>
+        </div>
+        
+        <div class="table-line">
+          <div class="subject-cell">LITERATURA I</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell final-average">0.0</div>
+          <div class="state-cell">EN CURSO</div>
+        </div>
+        
+        <div class="table-line">
+          <div class="subject-cell">INGLÉS III</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell final-average">0.0</div>
+          <div class="state-cell">EN CURSO</div>
+        </div>
+        
+        <div class="table-line">
+          <div class="subject-cell">ADMINISTRACIÓN FPA03</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell awaiting">--</div>
+          <div class="mark-cell final-average">0.0</div>
+          <div class="state-cell">EN CURSO</div>
+        </div>
+        
+        <!-- Fila de promedio general -->
+        <div class="table-line general-average">
+          <div class="subject-cell">PROMEDIO GENERAL</div>
+          <div class="mark-cell">--</div>
+          <div class="mark-cell">--</div>
+          <div class="mark-cell">--</div>
+          <div class="mark-cell general-average-value">0.0</div>
+          <div class="state-cell">--</div>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button class="action-button print-button" onclick="window.print()">Imprimir</button>
+        <button class="action-button download-button">Descargar PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="Script_calificaciones.js"></script>
+  <script src="Menu.js"></script>
+</body>
+</html>

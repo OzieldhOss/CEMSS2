@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CEMSS - Bienvenida Alumno</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="Bienvenida.css">
+  <link rel="stylesheet" href="Estilos_inicio.css">
+  <link rel="stylesheet" href="Alumnos.css"> <!-- Mantenemos el CSS original -->
+</head>
+<body>
+
+  <!-- Barra de navegación original -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+        <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+      </div>
+      
+      <!-- Botón de menú hamburguesa para móviles -->
+      <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+      
+      <!-- Menú principal (visible en desktop) -->
+      <div class="nav-right-group">
+        <div class="nav-buttons desktop-menu">
+           <a href="Alumnos.html">
+            <button class="nav-btn" id="plan-btn">Pizarra</button>
+          </a>
+          <a href="Perfil.html">
+            <button class="nav-btn" id="perfil-btn">Perfil</button>
+          </a>
+          <div class="dropdown">
+            <button class="nav-btn dropdown-toggle" id="admision-btn">Calificaciones</button>
+            <div class="dropdown-menu">
+              <a href="Calificaciones_Actual.html" class="dropdown-item">Cuatrimestre actual</a>
+              <a href="Calificaciones_historial.html" class="dropdown-item">Historial academico</a>
+            </div>
+          </div>
+           <a href="Inicio.html">
+            <button class="nav-btn" id="plan-btn" style="color: red; border-radius: 3px white;">Cerrar Sesión</button>
+           </a>
+        </div>
+
+        <div class="notification-container">
+          <div class="notification-bell" id="notificationBell">
+            <span class="bell-icon">🔔</span>
+            <span class="notification-badge" id="notificationBadge">3</span>
+          </div>
+          <div class="notification-panel" id="notificationPanel">
+            <div class="notification-header">
+              <h4>Notificaciones</h4>
+              <button class="close-notifications" id="closeNotifications">×</button>
+            </div>
+            <div class="notification-list">
+              <!-- Notificaciones dinámicas -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Menú móvil -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="Inicio.html" class="mobile-menu-item">Inicio</a>
+        <a href="Perfil.html" class="mobile-menu-item">Perfil</a>
+        <a href="Calificaciones_Actual.html" class="mobile-menu-item">Cuatrimestre actual</a>
+        <a href="Calificaciones_historial.html" class="mobile-menu-item">Historial academico</a>
+      </div>
+    </div>
+  </nav>  
+  </div>
+
+  <!-- Contenido principal con nuevas clases bd- -->
+  <div class="bd-dashboard-container">
+    <!-- Banner de bienvenida -->
+    <div class="bd-welcome-container">
+      <h1 class="bd-welcome-title">Bienvenido, <span id="bd-student-name">Ernesto Pérez</span></h1>
+      <p class="bd-welcome-subtitle">Cuatrimestre: <strong>Cuarto 2025</strong></p>
+    </div>
+
+    <!-- Sección principal -->
+    <div class="bd-main-section">
+      <!-- Sección de noticias -->
+      <div class="bd-news-section">
+        <h2 class="bd-section-title">Noticias importantes</h2>
+        <div class="bd-news-carousel">
+          <div class="bd-news-slide bd-active">
+            <h3>Inicio de nuevo cuatrimestre</h3>
+            <p>El próximo lunes 15 de noviembre comienza el cuatrimestre. Revisa tu horario.</p>
+            <span class="bd-news-date">10 Nov 2025</span>
+          </div>
+          <div class="bd-news-slide">
+            <h3>Convocatoria para becas</h3>
+            <p>Abierta la convocatoria para becas de excelencia académica. Fecha límite: 30 de noviembre.</p>
+            <span class="bd-news-date">5 Nov 2025</span>
+          </div>
+          <div class="bd-news-slide">
+            <h3>Talleres extracurriculares</h3>
+            <p>Inscripciones abiertas para talleres de programación, robótica y emprendimiento.</p>
+            <span class="bd-news-date">1 Nov 2025</span>
+          </div>
+          <div class="bd-carousel-controls">
+            <button class="bd-carousel-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="bd-carousel-next"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de calendario (reemplazar esta parte) -->
+       <div class="bd-calendar-section">
+  <h2 class="bd-section-title">Calendario académico</h2>
+  
+  <div class="bd-calendar-carousel">
+    <button class="bd-carousel-arrow bd-carousel-prev">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    
+    <div class="bd-calendar-viewport">
+      <div class="bd-calendar-annual" id="bd-calendar-annual"></div>
+    </div>
+    
+    <button class="bd-carousel-arrow bd-carousel-next">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  
+  <div class="bd-calendar-legend">
+    <div class="bd-legend-item">
+      <span class="bd-legend-color bd-today"></span>
+      <span>Hoy</span>
+    </div>
+    <div class="bd-legend-item">
+      <span class="bd-legend-color bd-important-day"></span>
+      <span>Inicio de cuatrimestre</span>
+    </div>
+    <div class="bd-legend-item">
+      <span class="bd-legend-color bd-event-day"></span>
+      <span>Eventos</span>
+    </div>
+  </div>
+</div>
+
+  <script src="Menu.js"></script>
+  <script src="bienvenida.js"></script>
+  <script src="Alumnos.js"></script>
+</body>
+</html>

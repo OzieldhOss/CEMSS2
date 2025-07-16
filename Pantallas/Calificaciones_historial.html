@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEMSS - Historial Académico</title>
+  <link rel="stylesheet" href="Califiaciones.css">
+  <link rel="stylesheet" href="Estilos_inicio.css">
+</head>
+<body>
+ <!-- Barra de navegación (se mantienen las clases originales) -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-buttons desktop-menu">
+      <a href="Perfil.html">
+      <button class="nav-btn" id="login-btn">Perfil</button>
+      </a>
+      <a href="Alumnos.html">
+      <button class="nav-btn" id="plan-btn">Pizarra</button>
+      </a>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle" id="admision-btn">Califiaciones</button>
+        <div class="dropdown-menu">
+          <a href="Calificaciones_Actual.html" class="dropdown-item">Cuatrimestre actual</a>
+          <a href="Calificaciones_historial.html" class="dropdown-item">Historial academico</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Perfil.html" class="mobile-menu-item">Perfil</a>
+        <a href="Alumnos.html" class="mobile-menu-item">Pizarra</a>
+      <a href="Calificaciones_Actual.html" class="mobile-menu-item">Cuatrimestre actual</a>
+      <a href="Calificaciones_historial.html" class="mobile-menu-item">Historial academico</a>
+    </div>
+  </div>
+</nav>  
+  </div>
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEMSS - Historial Académico</title>
+  <link rel="stylesheet" href="Califiaciones.css">
+</head>
+<body>
+  <div class="content-overlay-c">
+    <div class="academic-wrapper">
+      <h1 class="grade-title">HISTORIAL ACADÉMICO</h1>
+      
+      <div class="student-data">
+        <div class="data-row">
+          <span class="data-label">NOMBRE:</span>
+          <span class="data-value">Ernesto Pérez Barrios</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Matrícula:</span>
+          <span class="data-value">22PBH0124M</span>
+        </div>
+      </div>
+
+      <h2 class="section-heading">PLAN DE ESTUDIOS COMPLETO</h2>
+      
+      <!-- Primer Cuatrimestre -->
+      <div class="current-term">
+        <div class="term-header">
+          <h3>PRIMER CUATRIMESTRE</h3>
+          <div class="term-info">CICLO ESCOLAR 2024-2025 A</div>
+        </div>
+        
+        <div class="marks-table">
+          <div class="table-head">
+            <div class="subject-cell">MATERIA</div>
+            <div class="mark-cell">CALIFICACIÓN</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">MATEMÁTICAS I</div>
+            <div class="mark-cell">9</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">QUÍMICA I</div>
+            <div class="mark-cell">10</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">ÉTICA I</div>
+            <div class="mark-cell">10</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">METODOLOGÍA DE LA INVESTIGACIÓN</div>
+            <div class="mark-cell">7</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">TALLER DE LECTURA Y REDACCIÓN I</div>
+            <div class="mark-cell low-grade">3</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">INGLÉS I</div>
+            <div class="mark-cell">9</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">INFORMÁTICA I</div>
+            <div class="mark-cell low-grade">3</div>
+          </div>
+        </div>
+        
+        <div class="term-summary">
+          <div class="average-container">
+            <span class="average-text">PROMEDIO:</span>
+            <span class="average-number">7.3</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Segundo Cuatrimestre -->
+      <div class="current-term">
+        <div class="term-header">
+          <h3>SEGUNDO CUATRIMESTRE</h3>
+          <div class="term-info">CICLO ESCOLAR 2024-2025 B</div>
+        </div>
+        
+        <div class="marks-table">
+          <div class="table-head">
+            <div class="subject-cell">MATERIA</div>
+            <div class="mark-cell">CALIFICACIÓN</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">MATEMÁTICAS II</div>
+            <div class="mark-cell">8</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">QUÍMICA II</div>
+            <div class="mark-cell">8</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">ÉTICA II</div>
+            <div class="mark-cell">10</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">INTRODUCCIÓN A LAS CIENCIAS SOCIALES</div>
+            <div class="mark-cell">10</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">TALLER DE LECTURA Y REDACCIÓN II</div>
+            <div class="mark-cell">10</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">INGLÉS II</div>
+            <div class="mark-cell">6</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">INFORMÁTICA II</div>
+            <div class="mark-cell">10</div>
+          </div>
+        </div>
+        
+        <div class="term-summary">
+          <div class="average-container">
+            <span class="average-text">PROMEDIO:</span>
+            <span class="average-number">8.9</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tercer Cuatrimestre -->
+      <div class="current-term">
+        <div class="term-header">
+          <h3>TERCER CUATRIMESTRE</h3>
+          <div class="term-info">CICLO ESCOLAR 2024-2025 C</div>
+        </div>
+        
+        <div class="marks-table">
+          <div class="table-head">
+            <div class="subject-cell">MATERIA</div>
+            <div class="mark-cell">CALIFICACIÓN</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">MATEMÁTICAS III</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">BIOLOGÍA I</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">FÍSICA I</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">HISTORIA DE MÉXICO I</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">LITERATURA I</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">INGLÉS III</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">ADMINISTRACIÓN FPA03</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+        </div>
+        
+        <div class="term-summary">
+          <div class="average-container">
+            <span class="average-text">PROMEDIO:</span>
+            <span class="average-number">0.0</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cuarto Cuatrimestre -->
+      <div class="current-term">
+        <div class="term-header">
+          <h3>CUARTO CUATRIMESTRE</h3>
+          <div class="term-info">CICLO ESCOLAR 2025-2026 A</div>
+        </div>
+        
+        <div class="marks-table">
+          <div class="table-head">
+            <div class="subject-cell">MATERIA</div>
+            <div class="mark-cell">CALIFICACIÓN</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">MATEMÁTICAS IV</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">BIOLOGÍA II</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">FÍSICA II</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">HISTORIA DE MÉXICO II</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">LITERATURA II</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">INGLÉS IV</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">ADMINISTRACIÓN FPA04</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+        </div>
+        
+        <div class="term-summary">
+          <div class="average-container">
+            <span class="average-text">PROMEDIO:</span>
+            <span class="average-number">0.0</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quinto Cuatrimestre -->
+      <div class="current-term">
+        <div class="term-header">
+          <h3>QUINTO CUATRIMESTRE</h3>
+          <div class="term-info">CICLO ESCOLAR 2025-2026 B</div>
+        </div>
+        
+        <div class="marks-table">
+          <div class="table-head">
+            <div class="subject-cell">MATERIA</div>
+            <div class="mark-cell">CALIFICACIÓN</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">MATEMÁTICAS V</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">BIOLOGÍA III</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">FÍSICA III</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">HISTORIA UNIVERSAL</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">LITERATURA III</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">INGLÉS V</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">ADMINISTRACIÓN FPA05</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+        </div>
+        
+        <div class="term-summary">
+          <div class="average-container">
+            <span class="average-text">PROMEDIO:</span>
+            <span class="average-number">0.0</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sexto Cuatrimestre -->
+      <div class="current-term">
+        <div class="term-header">
+          <h3>SEXTO CUATRIMESTRE</h3>
+          <div class="term-info">CICLO ESCOLAR 2025-2026 C</div>
+        </div>
+        
+        <div class="marks-table">
+          <div class="table-head">
+            <div class="subject-cell">MATERIA</div>
+            <div class="mark-cell">CALIFICACIÓN</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">MATEMÁTICAS VI</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">BIOLOGÍA IV</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">FÍSICA IV</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">GEOGRAFÍA</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">LITERATURA IV</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">INGLÉS VI</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+          
+          <div class="table-line">
+            <div class="subject-cell">ADMINISTRACIÓN FPA06</div>
+            <div class="mark-cell awaiting">--</div>
+          </div>
+        </div>
+        
+        <div class="term-summary">
+          <div class="average-container">
+            <span class="average-text">PROMEDIO:</span>
+            <span class="average-number">0.0</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Promedio General -->
+      <div class="general-average">
+        <h3 class="section-heading">PROMEDIO GENERAL</h3>
+        <div class="average-container">
+          <div class="average-display">
+            <span class="average-text">PROMEDIO ACUMULADO:</span>
+            <span class="average-number">8.1</span>
+          </div>
+          <div class="bar-container">
+            <div class="progress-indicator" style="width: 81%"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="action-buttons">
+        <button class="action-button print-button" onclick="window.print()">Imprimir Historial</button>
+        <button class="action-button download-button">Descargar PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="Script_calificaciones.js"></script>
+</body>
+</html>
+
+  <script src="Script_calificaciones.js"></script>
+  <script src="Menu.js"></script>
+</body>
+</html>

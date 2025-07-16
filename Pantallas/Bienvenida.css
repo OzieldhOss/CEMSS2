@@ -1,0 +1,315 @@
+/* Estilos específicos para la pantalla de bienvenida con prefijo bd- */
+.bd-dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Banner de bienvenida */
+.bd-welcome-container {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.bd-welcome-title {
+  font-size: 2.2rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.bd-welcome-subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+/* Sección principal */
+.bd-main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .bd-main-section {
+    flex-direction: row;
+  }
+}
+
+/* Sección de noticias */
+.bd-news-section {
+  flex: 2;
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.bd-section-title {
+  margin-top: 0;
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.bd-news-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  min-height: 300px;
+}
+
+.bd-news-slide {
+  padding: 1.5rem;
+  display: none;
+}
+
+.bd-news-slide.bd-active {
+  display: block;
+}
+
+.bd-news-slide h3 {
+  margin-top: 0;
+  color: #1e40af;
+  font-size: 1.2rem;
+}
+
+.bd-news-slide p {
+  color: #334155;
+  line-height: 1.6;
+}
+
+.bd-news-date {
+  display: block;
+  margin-top: 1rem;
+  color: #64748b;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.bd-carousel-controls {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.bd-carousel-prev,
+.bd-carousel-next {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.bd-carousel-prev:hover,
+.bd-carousel-next:hover {
+  background-color: #2563eb;
+}
+
+/* Sección de calendario - Carrusel */
+.bd-calendar-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.bd-calendar-viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.bd-calendar-annual {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.bd-calendar-month {
+  min-width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0; /* Añadido para evitar compresión */
+}
+
+.bd-carousel-arrow {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 1;
+}
+
+.bd-carousel-arrow:hover {
+  background-color: #2563eb;
+}
+
+.bd-carousel-arrow:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Estilos compartidos del calendario */
+.bd-calendar-month h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #1e40af;
+  font-size: 1.1rem;
+}
+
+.bd-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+}
+
+.bd-calendar-weekday {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #64748b;
+  padding: 0.25rem 0;
+}
+
+.bd-calendar-day {
+  text-align: center;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.bd-calendar-day:hover {
+  background-color: #f1f5f9;
+}
+
+.bd-calendar-day.bd-empty-day {
+  visibility: hidden;
+}
+
+.bd-calendar-day.bd-today {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
+
+.bd-calendar-day.bd-important-day {
+  background-color: #f0fdf4;
+  color: #166534;
+  font-weight: 600;
+  position: relative;
+}
+
+.bd-calendar-day.bd-event-day {
+  background-color: #fef9c3;
+  color: #854d0e;
+  position: relative;
+}
+
+.bd-calendar-day.bd-important-day::after,
+.bd-calendar-day.bd-event-day::after {
+  content: "";
+  position: absolute;
+  bottom: 0.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+}
+
+.bd-calendar-day.bd-important-day::after {
+  background-color: #166534;
+}
+
+.bd-calendar-day.bd-event-day::after {
+  background-color: #854d0e;
+}
+
+/* Leyenda del calendario */
+.bd-calendar-legend {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bd-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.bd-legend-color {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 3px;
+}
+
+.bd-legend-color.bd-today {
+  background-color: #3b82f6;
+}
+
+.bd-legend-color.bd-important-day {
+  background-color: #f0fdf4;
+  border: 1px solid #166534;
+}
+
+.bd-legend-color.bd-event-day {
+  background-color: #fef9c3;
+  border: 1px solid #854d0e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bd-welcome-title {
+    font-size: 1.8rem;
+  }
+  
+  .bd-welcome-subtitle {
+    font-size: 1rem;
+  }
+  
+  .bd-section-title {
+    font-size: 1.3rem;
+  }
+  
+  .bd-calendar-carousel {
+    gap: 0.5rem;
+  }
+  
+  .bd-carousel-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}

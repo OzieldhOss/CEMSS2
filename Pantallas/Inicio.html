@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEMSS - Preparatoria Virtual</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Estilos_inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="animatedBackground"></canvas>
+<!-- Barra de navegación -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-buttons desktop-menu">
+      <a href="Inf_admision.html">
+      <button class="nav-btn" id="login-btn">Admisiones</button>
+      </a>
+      <a href="plan_estudios.html">
+      <button class="nav-btn" id="plan-btn">Plan de Estudios</button>
+      </a>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle" id="admision-btn">☰ Menu</button>
+        <div class="dropdown-menu">
+          <a href="Formulario_Alumnos.html" class="dropdown-item">Alumnos</a>
+          <a href="Formulario_Maestro.html" class="dropdown-item">Maestros</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Inf_admision.html" class="mobile-menu-item">Admisiones</a>
+        <a href="plan_estudios.html" class="mobile-menu-item">Plan de Estudios</a>
+      <a href="Formulario_Alumnos.html" class="mobile-menu-item">Alumnos</a>
+      <a href="Formulario_Maestro.html" class="mobile-menu-item">Maestros</a>
+    </div>
+  </div>
+</nav>  
+  </div>
+
+    <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-background">
+        <div class="hero-image-diagonal"></div>
+        <div class="hero-color-bg"></div>
+      </div>
+      <div class="hero-content">
+        <h1 style="
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
+      ">Preparatoria Virtual CEM<span style=" color: #0d486e;
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.5),
+      0 0 10px rgba(52, 152, 219, 0.3); ">SS</span></h1>
+        <p style="
+         text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
+        ;">Educación media superior cuatrimestral con validez oficial</p>
+        <button class="cta-btn" onclick="window.location.href='Inf_admision.html'">
+          ¡Inscríbete ahora!
+        </button>
+      </div>
+    </div>
+  </section>
+
+    <!-- Sección "Cómo ser parte" -->
+   <section class="how-to-join">
+      <div class="join-container">
+        <div class="text-column">
+          <h2>¿Cómo ser parte de Prepa en Línea-CEMSS?</h2>
+          
+          <div class="steps-container">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Convocatoria</h3>
+                <p>Completa el formulario de registro, carga tus documentos probatorios y responde el cuestionario de contexto socioeconómico.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Módulo propedéutico</h3>
+                <p>Recibe tu número de usuario y contraseña para el ingreso al aula y cursa el módulo propedéutico.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Inicio de cuatrimestre</h3>
+                <p>Comienza tus estudios en las fechas establecidas para cada periodo cuatrimestral.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="image-column">
+          <img src="Estudiante_anime.png" alt="Imagen ilustrativa de Prepa en Línea-SEP" class="join-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de cualidades -->
+  <div class="qualities-box-2">
+    <div class="qualities-box">
+        <section class="qualities-section">
+        <h2 style="
+            font-size: clamp(2rem, 7vw, 5rem);
+            color: #ffffff;
+            font-family: 'PT Serif', 'Times New Roman', Times, serif;
+            font-weight: 700;
+            text-align: center;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            padding: 0 20px;
+          ">CUALIDADES CEMSS</h2>
+          <div class="qualities-grid">
+            <div class="quality-colum">
+              <div class="quality-card">
+                <h3>Certificado oficial</h3>
+                <p>Título con validez oficial que te permite continuar con tus estudios de nivel superior.</p>
+              </div>
+              <div class="quality-card">
+                <h3>Virtualidad</h3>
+                <p>Plataforma educativa disponible 24/7 desde cualquier dispositivo con internet.</p>
+              </div>
+              <div class="quality-card">
+                <h3>Flexibilidad</h3>
+                <p>Contenidos disponibles las 24 horas para que estudies cuando mejor te convenga.</p>
+              </div>
+              <div class="quality-card">
+                <h3>Plan de estudios</h3>
+                <p>Modelo cuatrimestral con enfoque práctico y materias relevantes para el mundo actual.</p>
+              </div>
+              <div class="quality-card">
+                <h3>Cobertura nacional</h3>
+                <p>Atendemos estudiantes de todos los estados de la república mexicana.</p>
+              </div>
+              <div class="quality-card">
+                <h3>Costos Bajos</h3>
+                <p>Educación de calidad a un bajo costo para el estudiante.</p>
+              </div>
+          </div>
+        </section>
+    </div>
+  </div>
+<!-- Sección de Becas y Costos -->
+<section class="becas-section">
+  <div class="container">
+    <h2>Becas y Costos</h2>
+    
+    <div class="becas-container">
+      <!-- Tarjeta de Costos Regulares -->
+      <div class="beca-card">
+        <h3>Costos Regulares</h3>
+        <ul>
+          <li>
+            <i class="fas fa-file-alt"></i>
+            <strong>Inscripción:</strong> $1,200 pesos (Pago cuatrimestral)
+          </li>
+          <li>
+            <i class="fas fa-book"></i>
+            <strong>Colegiatura mensual:</strong> $1,000 pesos
+          </li>
+          <li>
+            <i class="fas fa-calculator"></i>
+            <strong>Total por cuatrimestre:</strong> $4,000 pesos
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Tarjeta de Costos con Beca -->
+      <div class="beca-card blue-card">
+        <h3>Costos con Beca</h3>
+        <ul>
+          <li>
+            <i class="fas fa-file-alt"></i>
+            <strong>Inscripción:</strong> $350 pesos (Pago cuatrimestral)
+          </li>
+          <li>
+            <i class="fas fa-book"></i>
+            <strong>Colegiatura mensual:</strong> $350 pesos
+          </li>
+          <li>
+            <i class="fas fa-calculator"></i>
+            <strong>Total por cuatrimestre:</strong> $1,400 pesos (pago único)
+          </li>
+          <li>
+            <i class="fas fa-money-bill-wave"></i>
+            <strong>Pago total al inicio:</strong> $1,750 pesos (inscripción + colegiatura)
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Tarjeta de Información de Becas -->
+      <div class="beca-card">
+        <h3>¿Cómo obtener la beca?</h3>
+        <p>La beca se otorga automáticamente a todos los alumnos que se inscriban durante el periodo de convocatoria abierta.</p>
+        <div class="info-message">
+          <p>
+            <i class="fas fa-info-circle"></i>
+            ¡Inscríbete durante el periodo de convocatoria y obtén automáticamente la beca!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección del calendario con mensaje de costos -->
+<section class="quarters-section">
+  <h2 class="section-title">Calendario <span>Cuatrimestral</span> 2025</h2>
+  
+  <!-- Mensaje sobre costos -->
+  <div class="costos-mensaje">
+    <h3>¡Aprovecha nuestros costos con beca!</h3>
+    <p><strong>Inscripción:</strong> $350 pesos (con beca) | $1,200 pesos (sin beca)</p>
+    <p><strong>Colegiatura cuatrimestral:</strong> $1,400 pesos (con beca) | $4,000 pesos (sin beca)</p>
+  </div>
+    
+    <div class="quarters-container">
+      <!-- Primer Cuatrimestre -->
+      <div class="quarter-item closed">
+        <div class="quarter-header">
+          <div class="quarter-shape"></div>
+          <h3>Convocatoria<br>Mayo-Agosto</h3>
+        </div>
+        <div class="quarter-content">
+          <p class="quarter-dates">Hasta Nuevo Aviso</p>
+          <div class="quarter-status">
+            <span class="status-icon">✖</span>
+            <span>Inscripciones cerradas</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Segundo Cuatrimestre (Destacado) -->
+      <div class="quarter-item current">
+        <div class="quarter-header">
+          <div class="quarter-shape"></div>
+          <h3>Convocatoria<br>Septiembre-Diciembres</h3>
+        </div>
+        <div class="quarter-content">
+          <p class="quarter-dates">Logra tus metas ahora!</p>
+          <div class="quarter-status">
+            <span class="status-icon">✓</span>
+            <span>Inscripciones abiertas</span>
+          </div>
+          <button class="quarter-btn">Inscribirme</button>
+        </div>
+      </div>
+      
+      <!-- Tercer Cuatrimestre -->
+      <div class="quarter-item upcoming">
+        <div class="quarter-header">
+          <div class="quarter-shape"></div>
+          <h3>Convocatoria<br>Enero-Abril</h3>
+        </div>
+        <div class="quarter-content">
+          <p class="quarter-dates">Preparate</p>
+          <div class="quarter-status">
+            <span class="status-icon">⏱</span>
+            <span>Próximas inscripciones</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="about-section">
+  <div class="about-container">
+    <div class="about-header">
+      <h2 class="section-title">Conócenos</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Descubre lo que nos hace diferentes</p>
+    </div>
+    
+    <div class="about-grid">
+      <div class="about-content">
+        <div class="about-text">
+          <p class="lead-text">CEMSS es una institución educativa comprometida con la excelencia académica y la innovación en la educación media superior en línea. Nuestro modelo cuatrimestral está diseñado para ofrecer flexibilidad sin sacrificar la calidad educativa.</p>
+          
+          <div class="features-box">
+            <h3 class="features-title">Contamos con:</h3>
+            <ul class="features-list">
+              <li class="feature-item">
+                <span class="feature-icon">🎯</span>
+                <span>Plataforma educativa moderna y fácil de usar</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">👨‍🏫</span>
+                <span>Docentes certificados en educación en línea</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">📊</span>
+                <span>Sistema de evaluación continuo</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">🛠️</span>
+                <span>Soporte técnico y académico permanente</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-image">
+        <div class="image-frame">
+          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Estudiantes en línea" class="featured-image">
+          <div class="image-overlay"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cta-container">
+      <a href="conocenos.html" class="cta-button">
+        Conócenos más
+        <span class="arrow-icon">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+   <div class="footer-container">
+  <div class="footer-content">
+    <!-- Sección de Logo y Redes -->
+    <div class="footer-section">
+       <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+      <h3>Síguenos</h3>
+      <div class="social-links">
+        <a href="#" class="social-link">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="#" class="social-link">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+
+    <!-- Sección de Contacto -->
+    <div class="footer-section">
+      <h3>Contacto</h3>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> contacto@cemss.edu.mx</p>
+        <p><i class="fas fa-phone"></i> 55 1234 5678</p>
+        <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 - 18:00 hrs</p>
+      </div>
+    </div>
+
+    <!-- Sección Conócenos -->
+    <div class="footer-section">
+      <h3>Conócenos</h3>
+      <ul class="footer-links">
+        <li><a href="conocenos.html#quienes-somos"><i class="fas fa-users"></i> Quiénes somos</a></li>
+        <li><a href="conocenos.html#vision"><i class="fas fa-eye"></i> Nuestra visión</a></li>
+        <li><a href="conocenos.html#mision"><i class="fas fa-bullseye"></i> Misión</a></li>
+        <li><a href="conocenos.html#valores"><i class="fas fa-gem"></i> Valores</a></li>
+        <li><a href="conocenos.html#historia"><i class="fas fa-history"></i> Historia</a></li>
+      </ul>
+    </div>
+
+    <!-- Sección de Enlaces Rápidos -->
+    <div class="footer-section">
+      <h3>Enlaces rápidos</h3>
+      <ul class="footer-links">
+        <li><a href="#"><i class="fas fa-shield-alt"></i> Aviso de privacidad</a></li>
+        <li><a href="#"><i class="fas fa-search"></i> Transparencia</a></li>
+        <li><a href="#"><i class="fas fa-user-shield"></i> Protocolo de seguridad</a></li>
+        <li><a href="#"><i class="fas fa-graduation-cap"></i> Oferta educativa</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer inferior -->
+  <div class="footer-bottom">
+    <div class="copyright">
+      <p>© 2023 CEMSS - Centro de Estudios Modernos Superiores. Todos los derechos reservados.</p>
+    </div>
+    <div class="legal-links">
+      <a href="#">Términos y condiciones</a> | 
+      <a href="#">Política de privacidad</a> | 
+      <a href="#">Mapa del sitio</a>
+    </div>
+  </div>
+</div>
+    <script src="Script_lineas.js"></script>
+    <script src="script.js"></script>
+    <script src="Menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --accent-color: #2980b9;
+  --text-color: #333;
+  --light-bg: #f5f5f5;
+  --white: #ffffff;
+  --shadow: 0 3px 10px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Estilos base específicos para Plan de Estudios */
+.pl-content-overlay {
+  position: relative;
+  background-color: transparent;
+  padding-top: 80px;
+}
+
+/* Hero Section */
+.pl-hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  animation: pl-fadeIn 1s ease-in;
+}
+
+.pl-hero::before {
+  content: "";
+  background-image: url(libro.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: brightness(20%);
+  z-index: -1;
+}
+
+@keyframes pl-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.pl-hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  animation: pl-slideUp 0.8s ease-out 0.2s both;
+}
+
+.pl-hero-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-bottom: 30px;
+  animation: pl-slideUp 0.8s ease-out 0.4s both;
+}
+
+@keyframes pl-slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Secciones generales */
+.pl-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.pl-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pl-section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.pl-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+/* Grid de características */
+.pl-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pl-feature-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: var(--transition);
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.pl-feature-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.pl-feature-card:nth-child(1).visible {
+  transition-delay: 0.1s;
+}
+.pl-feature-card:nth-child(2).visible {
+  transition-delay: 0.2s;
+}
+.pl-feature-card:nth-child(3).visible {
+  transition-delay: 0.3s;
+}
+.pl-feature-card:nth-child(4).visible {
+  transition-delay: 0.4s;
+}
+
+.pl-feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.pl-feature-title {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.pl-feature-text {
+  color: var(--text-color);
+}
+
+.pl-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.pl-feature-card:hover .pl-feature-icon {
+  transform: scale(1.2);
+  color: var(--primary-color);
+}
+
+/* Sección de cuatrimestres */
+.pl-quarters-section {
+  padding: 80px 20px;
+  background-color: rgba(245, 245, 245, 0.9);
+  text-align: center;
+}
+
+.pl-quarters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pl-quarter-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: var(--transition);
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.pl-quarter-card.visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.pl-quarter-card:nth-child(1).visible {
+  transition-delay: 0.2s;
+}
+.pl-quarter-card:nth-child(2).visible {
+  transition-delay: 0.4s;
+}
+
+.pl-quarter-title {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.pl-quarter-details {
+  margin-top: 20px;
+}
+
+.pl-quarter-text {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.pl-quarter-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Proceso de pasos */
+.pl-process-section {
+  padding: 80px 20px;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.pl-steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pl-step {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  display: flex;
+  text-align: left;
+  gap: 20px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: var(--transition);
+}
+
+.pl-step.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.pl-step:nth-child(1).visible {
+  transition-delay: 0.1s;
+}
+.pl-step:nth-child(2).visible {
+  transition-delay: 0.3s;
+}
+.pl-step:nth-child(3).visible {
+  transition-delay: 0.5s;
+}
+.pl-step:nth-child(4).visible {
+  transition-delay: 0.7s;
+}
+.pl-step:nth-child(5).visible {
+  transition-delay: 0.9s;
+}
+
+.pl-step-number {
+  background-color: var(--primary-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.pl-step:hover .pl-step-number {
+  background-color: var(--accent-color);
+  transform: rotate(15deg) scale(1.1);
+}
+
+.pl-step-content {
+  flex: 1;
+}
+
+.pl-step-title {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.pl-step-text {
+  color: var(--text-color);
+}
+
+/* Sección de beneficios */
+.pl-benefits-section {
+  padding: 100px 20px;
+
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+/* Llamado a la acción */
+.pl-cta-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.pl-cta-text {
+  margin-bottom: 30px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.pl-cta-btn {
+  padding: 12px 30px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: 44px;
+  min-width: 44px;
+  animation: pl-pulse 2s infinite;
+}
+
+@keyframes pl-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pl-cta-btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px) scale(1.05);
+  animation: none;
+}
+
+/* ===== MEDIA QUERIES PARA MÓVIL ===== */
+@media (max-width: 768px) {
+  /* Animaciones más rápidas en móvil */
+  .pl-section, .pl-feature-card, .pl-quarter-card, .pl-step {
+    transition-duration: 0.4s !important;
+  }
+  
+  /* Hero section */
+  .pl-hero {
+    height: 50vh;
+  }
+  
+  .pl-hero-title {
+    font-size: 2rem;
+  }
+  
+  .pl-hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  /* Secciones */
+  .pl-section, .pl-process-section, .pl-quarters-section, .pl-benefits-section, .pl-cta-section {
+    padding: 50px 20px;
+  }
+  
+  .pl-section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Cards */
+  .pl-feature-card, .pl-quarter-card {
+    padding: 20px;
+  }
+  
+  .pl-feature-icon {
+    font-size: 2rem;
+  }
+  
+  /* Pasos */
+  .pl-step {
+    flex-direction: column;
+    text-align: center;
+    min-width: 100%;
+  }
+  
+  .pl-step-number {
+    margin: 0 auto 15px;
+  }
+  
+  /* Botón CTA */
+  .pl-cta-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}
+
+/* Pequeñas animaciones para touch */
+@media (hover: none) {
+  .pl-feature-card:hover, .pl-quarter-card:hover, .pl-cta-btn:hover, 
+  .pl-step:hover .pl-step-number {
+    transform: none !important;
+  }
+  
+  .pl-feature-card:active, .pl-quarter-card:active {
+    transform: scale(0.98) !important;
+  }
+  
+  .pl-cta-btn:active {
+    background-color: var(--accent-color) !important;
+  }
+}

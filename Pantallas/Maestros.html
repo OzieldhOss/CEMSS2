@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEMSS - Panel del Profesor</title>
+  <link rel="stylesheet" href="Estilos_inicio.css">
+  <link rel="stylesheet" href="Maestros.css">
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-buttons desktop-menu">
+      <a href="Perfil.html">
+      <button class="nav-btn" id="login-btn">Perfil</button>
+      </a>
+      <a href="Inicio.html">
+      <button class="nav-btn" id="plan-btn">Cerrar Sesión</button>
+      </a>
+    </div>
+    
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Perfil.html" class="mobile-menu-item">Perfil</a>
+        <a href="Inicio.html" class="mobile-menu-item">Cerrar Sesión</a>
+    </div>
+  </div>
+</nav>  
+  </div>
+
+  <!-- Panel principal -->
+  <div class="professor-dashboard">
+    <!-- Panel izquierdo - Grupos (se mantiene igual) -->
+    <aside class="groups-panel">
+      <h3>Tus Grupos</h3>
+      <div class="group-list">
+        <div class="group-card" data-group="101">
+          <h4>Grupo 101</h4>
+          <p>Matemáticas IV</p>
+          <p>Lun/Mie 10:00-11:30</p>
+        </div>
+        <div class="group-card" data-group="205">
+          <h4>Grupo 205</h4>
+          <p>Física III</p>
+          <p>Mar/Jue 14:00-15:30</p>
+        </div>
+        <div class="group-card" data-group="302">
+          <h4>Grupo 302</h4>
+          <p>Literatura Universal</p>
+          <p>Vie 09:00-12:00</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Panel central - Detalles de la clase seleccionada -->
+    <main class="class-details-panel">
+      <div class="welcome-section">
+        <h2>Bienvenido Profesor: <span id="professor-name">Julio</span></h2>
+      </div>
+
+      <div class="class-header">
+        <div class="class-info">
+          <h2 id="class-name">Física III</h2>
+          <div id="class-meta">
+            <span id="group-name">Grupo 205</span>
+            <span id="student-count">25 alumnos</span>
+          </div>
+        </div>
+        <button class="add-activity-btn" id="addActivityBtn">+ Nueva Actividad</button>
+      </div>
+      
+      <div class="activities-container" id="activitiesContainer">
+        <p class="no-class-selected">Selecciona una clase del panel izquierdo para ver sus actividades</p>
+        
+        <!-- Plantilla de actividad (se mostrará dinámicamente) -->
+        <div class="activity-template" style="display: none;">
+          <div class="activity-item">
+            <div class="activity-content">
+              <h4 class="activity-title">Título de la actividad</h4>
+              <p class="activity-due-date">Fecha de entrega: 00/00/0000</p>
+              <p class="activity-submissions">Entregas: 0/0 estudiantes</p>
+            </div>
+            <div class="activity-actions">
+              <button class="action-btn add-comment">Agregar Comentario</button>
+              <button class="action-btn view-submissions">Ver Entregas</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Panel derecho - Calendario -->
+    <aside class="calendar-panel">
+      <h3>Julio 2025</h3>
+      <div class="mini-calendar">
+        <div class="calendar-header">
+          <span>Dom</span>
+          <span>Lun</span>
+          <span>Mar</span>
+          <span>Mié</span>
+          <span>Jue</span>
+          <span>Vie</span>
+          <span>Sáb</span>
+        </div>
+        <div class="calendar-days">
+          <span>29</span>
+          <span>30</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span class="current-day">7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+          <span>11</span>
+          <span>12</span>
+          <span>13</span>
+          <span>14</span>
+          <span>15</span>
+          <span>16</span>
+          <span>17</span>
+          <span>18</span>
+          <span>19</span>
+          <span>20</span>
+          <span>21</span>
+          <span>22</span>
+          <span>23</span>
+          <span>24</span>
+          <span>25</span>
+          <span>26</span>
+          <span>27</span>
+          <span>28</span>
+          <span>29</span>
+          <span>30</span>
+          <span>31</span>
+          <span>1</span>
+          <span>2</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script_profesor.js"></script>
+  <script src="Menu.js"></script>
+</body>
+</html>

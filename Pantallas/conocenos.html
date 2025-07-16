@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEMSS - Conócenos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Estilos_inicio.css">
+  <link rel="stylesheet" href="conocenos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="animatedBackground"></canvas>
+<!-- Barra de navegación -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-buttons desktop-menu">
+      <a href="Inicio.html">
+      <button class="nav-btn" id="login-btn">Inicio</button>
+      </a>
+      <a href="Inf_admision.html">
+      <button class="nav-btn" id="login-btn">Admisiones</button>
+      </a>
+      <a href="plan_estudios.html">
+      <button class="nav-btn" id="plan-btn">Plan de Estudios</button>
+      </a>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle" id="admision-btn">☰ Menu</button>
+        <div class="dropdown-menu">
+          <a href="Formulario_Alumnos.html" class="dropdown-item">Alumnos</a>
+          <a href="Formulario_Maestro.html" class="dropdown-item">Maestros</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Inf_admision.html" class="mobile-menu-item">Admisiones</a>
+        <a href="plan_estudios.html" class="mobile-menu-item">Plan de Estudios</a>
+      <a href="Formulario_Alumnos.html" class="mobile-menu-item">Alumnos</a>
+      <a href="Formulario_Maestro.html" class="mobile-menu-item">Maestros</a>
+    </div>
+  </div>
+</nav>  
+  </div>
+
+<!-- Hero Section para Conócenos -->
+<section class="cn-hero-section">
+  <div class="cn-hero-background"></div>
+  <div class="cn-hero-content">
+    <h1 style="
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        text-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
+      ">Conoce más sobre CEM<span style=" color: #0d486e;
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.5),
+      0 0 10px rgba(52, 152, 219, 0.3); ">SS</span></h1>
+  </div>
+</section>
+
+<div class="hero-spacer"></div>
+
+<div class="hero-spacer"></div>
+<!-- Sección Quiénes Somos -->
+<section class="cn-about-section" id="quienes-somos">
+  <div class="cn-about-container">
+    <div class="cn-about-header">
+      <h2 class="section-title">¿Quiénes Somos?</h2>
+      <div class="section-divider"></div>
+    </div>
+    
+    <div class="cn-about-grid">
+      <div class="cn-about-content">
+        <div class="cn-about-text">
+          <p class="lead-text">En el <strong>Centro de Estudios Medio Superiores y Superiores (CEMSS)</strong>, nos dedicamos a ofrecer educación media superior con un enfoque moderno, inclusivo y accesible. Fundado en 2022 en San Juan del Río, Querétaro, nuestro centro surge con la misión de reducir el rezago educativo en la región y en todo México mediante una modalidad virtual innovadora que rompe barreras de tiempo, lugar y distancia.</p>
+          
+          <div class="cn-features-box">
+            <h3 class="cn-features-title">Nuestro Compromiso</h3>
+            <ul class="cn-features-list">
+              <li class="cn-feature-item">
+                <span class="cn-feature-icon">🎓</span>
+                <span>Educación de calidad accesible para todos</span>
+              </li>
+              <li class="cn-feature-item">
+                <span class="cn-feature-icon">🌍</span>
+                <span>Inclusión educativa para sectores rezagados</span>
+              </li>
+              <li class="cn-feature-item">
+                <span class="cn-feature-icon">💻</span>
+                <span>Tecnología al servicio del aprendizaje</span>
+              </li>
+              <li class="cn-feature-item">
+                <span class="cn-feature-icon">❤️</span>
+                <span>Formación integral centrada en el desarrollo humano</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cn-about-image">
+        <div class="cn-image-frame">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Estudiantes en línea" class="cn-featured-image">
+          <div class="cn-image-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Misión y Visión -->
+<section class="mission-vision">
+  <div class="mv-container">
+    <!-- Tarjeta Misión -->
+    <div class="mv-card mission-card" id="mision">
+      <div class="mv-icon">
+        <i class="fas fa-bullseye"></i>
+      </div>
+      <h3>Nuestra Misión</h3>
+      <p>Brindar estudios de Bachillerato General a través de un modelo curricular basado en competencias, que forme de manera integral a ciudadanos responsables y solidarios, comprometidos con su entorno, con habilidades académicas sólidas y capaces de gestionar sus emociones, preparándolos para continuar su formación en la educación superior o incorporarse al sector productivo.</p>
+    </div>
+    
+    <!-- Tarjeta Visión -->
+    <div class="mv-card vision-card" id="vision">
+      <div class="mv-icon">
+        <i class="fas fa-eye"></i>
+      </div>
+      <h3>Nuestra Visión</h3>
+      <p>Ser una institución de educación media superior reconocida por su calidad educativa e innovación tecnológica, que pone en el centro a sus estudiantes, tanto en el aspecto cognitivo como afectivo, y que promueve la interacción crítica y activa con la realidad social de cada alumno.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Historia -->
+<section class="history-section" id="historia">
+  <div class="history-container">
+    <div class="history-header">
+      <h2 class="section-title">Nuestra Historia</h2>
+      <div class="section-divider"></div>
+    </div>
+    
+    <div class="history-content">
+      <div class="history-image">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Equipo CEMSS">
+      </div>
+      <div class="history-text">
+        <p>El CEMSS nace en 2022 con el objetivo de transformar la educación tradicional, haciendo uso de plataformas digitales que permiten una experiencia de aprendizaje flexible, personalizada y sin fronteras. Fundado en San Juan del Río, Querétaro, nuestra institución surge como respuesta a la necesidad de reducir el rezago educativo en la región.</p>
+        <p>Nos enorgullece contar con un Bachillerato General en modalidad virtual, respaldado con el <strong>Registro de Validez Oficial de Estudios (RVOE)</strong> por la SEP, lo que garantiza que nuestros estudios tienen reconocimiento oficial en todo el territorio nacional.</p>
+        <p>Desde nuestros inicios, hemos trabajado para ofrecer una educación de calidad que combine lo mejor de la pedagogía tradicional con las ventajas de la tecnología moderna, siempre manteniendo un enfoque humano y centrado en el estudiante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Valores -->
+<section class="values-section" id="valores">
+  <div class="values-container">
+    <div class="values-header">
+      <h2 class="section-title">Nuestros Valores</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Principios que guían nuestra institución</p>
+    </div>
+    
+    <div class="values-grid">
+      <!-- Valor 1 -->
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <h3>Responsabilidad</h3>
+        <p>Fomentamos el compromiso personal y académico en cada uno de nuestros estudiantes, promoviendo la toma de decisiones conscientes y el cumplimiento de sus deberes para su desarrollo integral.</p>
+      </div>
+      
+      <!-- Valor 2 -->
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Inclusión</h3>
+        <p>Creemos en una educación accesible para todos, sin importar su contexto social, económico o geográfico. Nuestra modalidad virtual rompe barreras y promueve la equidad educativa.</p>
+      </div>
+      
+      <!-- Valor 3 -->
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Innovación</h3>
+        <p>Apostamos por el uso de la tecnología y estrategias pedagógicas actuales para ofrecer una experiencia educativa moderna, flexible y centrada en el aprendizaje significativo.</p>
+      </div>
+      
+      <!-- Valor 4 -->
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Empatía</h3>
+        <p>Promovemos un ambiente formativo donde se reconoce la dimensión afectiva de cada estudiante, respetando sus emociones, necesidades y realidades personales.</p>
+      </div>
+      
+      <!-- Valor 5 -->
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <h3>Calidad Educativa</h3>
+        <p>Nos comprometemos con altos estándares académicos, docentes capacitados y un modelo educativo enfocado en el desarrollo de competencias clave para la vida y el trabajo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección CTA -->
+<section class="cta-section">
+  <div class="cta-container">
+    <h2>¿Listo para formar parte de CEMSS?</h2>
+    <p>Únete a nuestra comunidad educativa y comienza tu camino hacia el éxito académico</p>
+    <div class="cta-buttons">
+      <a href="Inf_admision.html" class="cta-btn primary">¡Inscríbete ahora!</a>
+      <a href="plan_estudios.html" class="cta-btn secondary">Conoce nuestro plan de estudios</a>
+    </div>
+  </div>
+</section>
+
+   <div class="footer-container">
+  <div class="footer-content">
+    <!-- Sección de Logo y Redes -->
+    <div class="footer-section">
+       <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+      <h3>Síguenos</h3>
+      <div class="social-links">
+        <a href="#" class="social-link">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="#" class="social-link">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+
+    <!-- Sección de Contacto -->
+    <div class="footer-section">
+      <h3>Contacto</h3>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> contacto@cemss.edu.mx</p>
+        <p><i class="fas fa-phone"></i> 55 1234 5678</p>
+        <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 - 18:00 hrs</p>
+      </div>
+    </div>
+
+     <!-- Sección Conócenos -->
+    <div class="footer-section">
+      <h3>Conócenos</h3>
+      <ul class="footer-links">
+        <li><a href="conocenos.html#quienes-somos"><i class="fas fa-users"></i> Quiénes somos</a></li>
+        <li><a href="conocenos.html#vision"><i class="fas fa-eye"></i> Nuestra visión</a></li>
+        <li><a href="conocenos.html#mision"><i class="fas fa-bullseye"></i> Misión</a></li>
+        <li><a href="conocenos.html#valores"><i class="fas fa-gem"></i> Valores</a></li>
+        <li><a href="conocenos.html#historia"><i class="fas fa-history"></i> Historia</a></li>
+      </ul>
+    </div>
+
+    <!-- Sección de Enlaces Rápidos -->
+    <div class="footer-section">
+      <h3>Enlaces rápidos</h3>
+      <ul class="footer-links">
+        <li><a href="#"><i class="fas fa-shield-alt"></i> Aviso de privacidad</a></li>
+        <li><a href="#"><i class="fas fa-search"></i> Transparencia</a></li>
+        <li><a href="#"><i class="fas fa-user-shield"></i> Protocolo de seguridad</a></li>
+        <li><a href="#"><i class="fas fa-graduation-cap"></i> Oferta educativa</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer inferior -->
+  <div class="footer-bottom">
+    <div class="copyright">
+      <p>© 2023 CEMSS - Centro de Estudios Modernos Superiores. Todos los derechos reservados.</p>
+    </div>
+    <div class="legal-links">
+      <a href="#">Términos y condiciones</a> | 
+      <a href="#">Política de privacidad</a> | 
+      <a href="#">Mapa del sitio</a>
+    </div>
+  </div>
+</div>
+    <script src="Script_lineas.js"></script>
+    <script src="script.js"></script>
+    <script src="Menu.js"></script>
+</body>
+</html>

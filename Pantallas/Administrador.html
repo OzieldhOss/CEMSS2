@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEMSS - Panel del Administrador</title>
+  <link rel="stylesheet" href="Estilos_inicio.css">
+  <link rel="stylesheet" href="Administrador.css">
+</head>
+<body>
+  <!-- Barra de navegación (igual que en el profesor) -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-buttons desktop-menu">
+      <a href="Perfil.html">
+      <button class="nav-btn" id="login-btn">Perfil</button>
+      </a>
+      <a href="Inicio.html">
+      <button class="nav-btn" id="plan-btn">Cerrar Sesión</button>
+      </a>
+    </div>
+    
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Perfil.html" class="mobile-menu-item">Perfil</a>
+        <a href="Inicio.html" class="mobile-menu-item">Cerrar Sesión</a>
+    </div>
+  </div>
+</nav>  
+  </div>
+
+  <!-- Panel principal del administrador -->
+  <div class="administrador-dashboard">
+    <!-- Panel izquierdo - Opciones administrativas -->
+    <aside class="administrador-options-panel">
+      <h3>Opciones Administrativas</h3>
+      <div class="administrador-option-list">
+        <div class="administrador-option-card active" data-option="cuatrimestres">
+          <h4>Gestión de Cuatrimestres</h4>
+          <p>Crear/Editar periodos académicos</p>
+        </div>
+        <div class="administrador-option-card" data-option="planes">
+          <h4>Planes de Estudio</h4>
+          <p>Administrar contenidos académicos</p>
+        </div>
+        <div class="administrador-option-card" data-option="usuarios">
+          <h4>Gestión de Usuarios</h4>
+          <p>Administrar profesores y alumnos</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Panel central - Contenido principal -->
+    <main class="administrador-main-panel">
+      <div class="administrador-welcome-section">
+        <h2>Bienvenido Administrador: <span id="administrador-name">Nombre</span></h2>
+      </div>
+
+      <!-- Sección de gestión de cuatrimestres -->
+      <div class="administrador-section" id="cuatrimestres-section">
+        <div class="administrador-header">
+          <h2>Gestión de Cuatrimestres</h2>
+          <button class="administrador-add-btn" id="addCuatrimestreBtn">+ Nuevo Cuatrimestre</button>
+        </div>
+        
+        <!-- Lista de cuatrimestres existentes -->
+        <div class="administrador-list" id="cuatrimestresList">
+          <div class="administrador-list-item">
+            <div class="administrador-item-content">
+              <h4>Cuatrimestre Enero-Abril 2025</h4>
+              <p>Estado: Activo</p>
+              <p>Fecha inicio: 10/01/2025 - Fecha fin: 20/04/2025</p>
+            </div>
+            <div class="administrador-item-actions">
+              <button class="administrador-action-btn edit-btn">Editar</button>
+              <button class="administrador-action-btn delete-btn">Eliminar</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Formulario para nuevo cuatrimestre (oculto inicialmente) -->
+        <div class="administrador-form-container" id="nuevoCuatrimestreForm" style="display: none;">
+          <h3>Crear Nuevo Cuatrimestre</h3>
+          <form id="cuatrimestreForm">
+            <div class="administrador-form-group">
+              <label for="cuatrimestreNombre">Nombre del Cuatrimestre:</label>
+              <input type="text" id="cuatrimestreNombre" required>
+            </div>
+            
+            <div class="administrador-form-group">
+              <label for="fechaInicio">Fecha de Inicio:</label>
+              <input type="date" id="fechaInicio" required>
+            </div>
+            
+            <div class="administrador-form-group">
+              <label for="fechaFin">Fecha de Fin:</label>
+              <input type="date" id="fechaFin" required>
+            </div>
+            <div class="administrador-form-group">
+            
+                <label>Grupos asignados:</label>
+            <div class="grupos-select-container">
+                <div class="grupos-select-options">
+                <label><input type="checkbox" name="grupos" value="1A"> 1° A</label>
+                <label><input type="checkbox" name="grupos" value="1B"> 1° B</label>
+                <label><input type="checkbox" name="grupos" value="2A"> 2° A</label>
+                <label><input type="checkbox" name="grupos" value="2B"> 2° B</label>
+                <label><input type="checkbox" name="grupos" value="3A"> 3° A</label>
+                <label><input type="checkbox" name="grupos" value="3B"> 3° B</label>
+                <label><input type="checkbox" name="grupos" value="4A"> 4° A</label>
+                <label><input type="checkbox" name="grupos" value="4B"> 4° B</label>
+                </div>
+                <button type="button" class="administrador-select-all-btn">Seleccionar todos</button>
+            </div>
+            </div>
+            
+            <div class="administrador-form-group">
+              <label>Contenido del Plan de Estudios:</label>
+              <div class="administrador-radio-group">
+                <label>
+                  <input type="radio" name="contenido" value="existente" checked> 
+                  Usar contenido existente
+                </label>
+                <label>
+                  <input type="radio" name="contenido" value="nuevo"> 
+                  Crear nuevo contenido
+                </label>
+              </div>
+            </div>
+            
+            <!-- Sección para nuevo contenido (oculta inicialmente) -->
+            <div class="administrador-new-content" id="nuevoContenidoSection" style="display: none;">
+              <h4>Opciones para nuevo contenido:</h4>
+              <div class="administrador-content-options">
+                <button type="button" class="administrador-content-option" id="subirWordBtn">
+                  <span class="option-icon">📄</span>
+                  <span>Subir archivo Word</span>
+                </button>
+                <button type="button" class="administrador-content-option" id="crearFormularioBtn">
+                  <span class="option-icon">✏️</span>
+                  <span>Crear formulario manual</span>
+                </button>
+              </div>
+              
+              <!-- Formulario para subir Word -->
+              <div class="administrador-upload-form" id="uploadWordForm" style="display: none;">
+                <h5>Subir archivo Word</h5>
+                <input type="file" id="wordFile" accept=".doc,.docx">
+                <p class="administrador-hint">El sistema procesará automáticamente el documento y extraerá la estructura del plan de estudios.</p>
+                <!-- Espacio reservado para el futuro algoritmo -->
+                <div id="wordProcessorPlaceholder"></div>
+              </div>
+              
+              <!-- Formulario para crear contenido manual -->
+              <div class="administrador-manual-form" id="manualContentForm" style="display: none;">
+                <h5>Crear contenido manualmente</h5>
+                <div class="administrador-form-builder">
+                  <div class="administrador-form-controls">
+                    <button type="button" class="administrador-add-control" data-type="text">+ Texto</button>
+                    <button type="button" class="administrador-add-control" data-type="multiple">+ Pregunta de opcion multiple</button>
+                    <button type="button" class="administrador-add-control" data-type="truefalse">+ Verdadero/Falso</button>
+                    <button type="button" class="administrador-add-control" data-type="connect">+ Conectar</button>
+                  </div>
+                  
+                  <div class="administrador-form-preview" id="formPreview">
+                    <!-- Aquí se agregarán dinámicamente los controles del formulario -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="administrador-form-actions">
+              <button type="submit" class="administrador-submit-btn">Guardar Cuatrimestre</button>
+              <button type="button" class="administrador-cancel-btn" id="cancelCuatrimestreBtn">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Otras secciones (inicialmente ocultas) -->
+      <div class="administrador-section" id="planes-section" style="display: none;">
+        <!-- Contenido de planes de estudio -->
+      </div>
+      
+      <div class="administrador-section" id="usuarios-section" style="display: none;">
+        <!-- Contenido de gestión de usuarios -->
+      </div>
+    </main>
+
+    <!-- Panel derecho - Acciones rápidas -->
+    <aside class="administrador-quick-actions-panel">
+      <h3>Acciones Rápidas</h3>
+      <div class="administrador-quick-actions">
+        <button class="administrador-quick-action">
+          <span class="action-icon">📊</span>
+          <span>Reportes</span>
+        </button>
+        <button class="administrador-quick-action">
+          <span class="action-icon">🔔</span>
+          <span>Notificaciones</span>
+        </button>
+        <button class="administrador-quick-action">
+          <span class="action-icon">⚙️</span>
+          <span>Configuración</span>
+        </button>
+      </div>
+      
+      <div class="administrador-recent-activity">
+        <h4>Actividad Reciente</h4>
+        <div class="administrador-activity-item">
+          <p>Nuevo cuatrimestre creado</p>
+          <small>Hace 2 días</small>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="Menu.js"></script>
+  <script src="Administrador.js"></script>
+</body>
+</html>

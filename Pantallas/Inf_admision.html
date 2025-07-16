@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admisiones - CEMSS Preparatoria Virtual</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Estilos_inicio.css">
+  <link rel="stylesheet" href="Inf_admision.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="animatedBackground"></canvas>
+
+<!-- Barra de navegación -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-buttons desktop-menu">
+      <a href="Inicio.html">
+      <button class="nav-btn" id="login-btn">Inicio</button>
+      </a>
+      <a href="plan_estudios.html">
+      <button class="nav-btn" id="plan-btn">Plan de Estudios</button>
+      </a>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle" id="admision-btn">☰ Menu</button>
+        <div class="dropdown-menu">
+          <a href="Formulario_Alumnos.html" class="dropdown-item">Alumnos</a>
+          <a href="Formulario_Maestro.html" class="dropdown-item">Maestros</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Inicio.html" class="mobile-menu-item">Inicio</a>
+        <a href="plan_estudios.html" class="mobile-menu-item">Plan de Estudios</a>
+      <a href="Formulario_Alumnos.html" class="mobile-menu-item">Alumnos</a>
+      <a href="Formulario_Maestro.html" class="mobile-menu-item">Maestros</a>
+    </div>
+  </div>
+</nav>  
+  </div>
+
+<!-- Contenido específico de admisiones con clases nuevas -->
+<section class="adm-hero-section">
+  <div class="adm-hero-container">
+    <div class="adm-hero-content">
+      <h1 class="adm-hero-title">Admisiones CEMSS Virtual</h1>
+      <p class="adm-hero-subtitle">Tu futuro comienza aquí. Forma parte de la mejor preparatoria virtual con reconocimiento oficial SEP.</p>
+      <div class="adm-hero-features">
+        <div class="feature-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Preparatoria completa en 2 años 4 meses</span>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Certificado oficial con validez SEP</span>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Horarios flexibles adaptados a tus necesidades</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="adm-benefits-section">
+  <div class="adm-container">
+    <h2 class="adm-section-title">¿Por qué elegir CEMSS Virtual?</h2>
+    <p class="adm-section-description">Descubre las ventajas de estudiar en la primera preparatoria 100% virtual con validez oficial</p>
+    
+    <div class="adm-benefits-grid">
+      <div class="adm-benefit-card">
+        <i class="fas fa-laptop-house"></i>
+        <h3>Educación desde cualquier lugar</h3>
+        <p>Accede a tus clases desde cualquier dispositivo con conexión a internet, sin desplazamientos ni horarios rígidos.</p>
+      </div>
+      
+      <div class="adm-benefit-card">
+        <i class="fas fa-user-clock"></i>
+        <h3>Flexibilidad total</h3>
+        <p>Organiza tus estudios según tu disponibilidad. Nuestro modelo se adapta a tus circunstancias personales.</p>
+      </div>
+      
+      <div class="adm-benefit-card">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h3>Docentes especializados</h3>
+        <p>Profesores con amplia experiencia en educación virtual y seguimiento personalizado de tu avance académico.</p>
+      </div>
+      
+      <div class="adm-benefit-card">
+        <i class="fas fa-certificate"></i>
+        <h3>Certificación oficial</h3>
+        <p>Al concluir obtienes tu certificado de bachillerato con validez oficial ante la SEP y todas las instituciones.</p>
+      </div>
+      <div class="adm-benefit-card">
+        <i class="fas fa-book-open"></i>
+        <h3>Recursos Disponibles</h3>
+        <p>Libros y cuadernos de actividades digitales sin costo alguno.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="adm-process-section">
+  <div class="adm-container">
+    <h2 class="adm-section-title">Proceso de Admisión</h2>
+    <p class="adm-section-description">Solo necesitas completar estos sencillos pasos para comenzar tu preparatoria virtual</p>
+    
+    <div class="adm-steps-container">
+      <div class="adm-step-card">
+        <div class="adm-step-number">1</div>
+        <h3 class="adm-step-title">Registro en línea</h3>
+        <p class="adm-step-text">Completa nuestro formulario digital con tus datos personales y académicos. Solo te tomará 10 minutos.</p>
+        <div class="step-duration">
+          <i class="far fa-clock"></i> Duración estimada: 10 min
+        </div>
+      </div>
+      
+      
+      <div class="adm-step-card">
+        <div class="adm-step-number">2</div>
+        <h3 class="adm-step-title">Entrega de documentos</h3>
+        <p class="adm-step-text">Envía digitalmente tus documentos requeridos. Te guiaremos paso a paso en este proceso.</p>
+        <a href="#requisitos" class="adm-step-button">Ver requisitos</a>
+        <div class="step-duration">
+          <i class="far fa-clock"></i> 24-48 hrs para validación
+        </div>
+      </div>
+
+      <div class="adm-step-card">
+        <div class="adm-step-number">3</div>
+        <h3 class="adm-step-title">Pago de inscripción</h3>
+        <p class="adm-step-text">Realiza el pago correspondiente mediante transferencia bancaria, depósito o tarjeta de crédito.</p>
+        <div class="step-duration">
+          <i class="far fa-clock"></i> Proceso inmediato
+        </div>
+      </div>
+      
+      <div class="adm-step-card">
+        <div class="adm-step-number">4</div>
+        <h3 class="adm-step-title">Confirmación y acceso</h3>
+        <p class="adm-step-text">Recibe tu correo de bienvenida con acceso a la plataforma, horarios y materiales de estudio.</p>
+        <div class="step-duration">
+          <i class="far fa-clock"></i> Inicio inmediato
+        </div>
+      </div>
+    </div>
+    
+    <div class="adm-process-note">
+      <p><strong>Nota:</strong> Todo el proceso se realiza en línea. No necesitas acudir físicamente a ninguna oficina.</p>
+    </div>
+  </div>
+</section>
+
+<section class="adm-requirements-section" id="requisitos">
+  <div class="adm-container">
+    <h2 class="adm-section-title">Documentación Requerida</h2>
+    <p class="adm-section-description">Prepara estos documentos para agilizar tu proceso de inscripción</p>
+    
+    <div class="adm-docs-grid">
+      <div class="adm-docs-card">
+        <h3 class="adm-docs-title"><i class="fas fa-file-alt"></i> Documentos básicos</h3>
+        <ul class="adm-docs-list">
+          <li><i class="fas fa-check-circle"></i> Acta de nacimiento (copia)</li>
+          <li><i class="fas fa-check-circle"></i> CURP (copia legible)</li>
+          <li class="doc-with-btn">
+            <div>
+              <i class="fas fa-check-circle"></i> Certificado de secundaria (copia)
+            </div>
+            <button class="certificate-btn" id="certificateToggle">
+              <i class="fas fa-question-circle"></i> ¿No tienes certificado?
+            </button>
+          </li>
+          <div class="special-case-info" id="specialCaseInfo">
+            <i class="fas fa-info-circle"></i> En caso de que aún no cuentes con tu certificado, tienes la opción de solicitar una prórroga con tu constancia de estudios de secundaria.
+          </div>        </ul>
+      </div>
+    </div>
+    
+    <div class="adm-cta-container">
+      <a href="Formulario_registro.html" class="adm-cta-button">
+        <i class="fas fa-pencil-alt"></i> Comenzar inscripción ahora
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="adm-faq-section">
+  <div class="adm-container">
+    <h2 class="adm-section-title">Preguntas Frecuentes</h2>
+    <p class="adm-section-description">Resolvemos tus dudas más comunes sobre el proceso de admisión</p>
+    
+    <div class="adm-faq-grid">
+      <div class="adm-faq-card">
+        <h3><i class="far fa-question-circle"></i> ¿Cuál es el costo de la inscripción?</h3>
+        <p>El costo total de la inscripción es de $1,800 pesos mexicanos, que incluye acceso a la plataforma, materiales digitales y trámites administrativos. Ofrecemos facilidades de pago.</p>
+      </div>
+      
+      <div class="adm-faq-card">
+        <h3><i class="far fa-question-circle"></i> ¿Cómo son las clases virtuales?</h3>
+        <p>Nuestras clases combinan videolecciones interactivas, materiales multimedia, foros de discusión y sesiones en vivo con profesores. Puedes acceder 24/7 desde nuestra plataforma.</p>
+      </div>
+      
+      <div class="adm-faq-card">
+        <h3><i class="far fa-question-circle"></i> ¿Hay horarios fijos?</h3>
+        <p>No, nuestro modelo es completamente flexible. Solo algunas actividades especiales como exámenes o sesiones de retroalimentación tienen horarios programados.</p>
+      </div>
+      
+      <div class="adm-faq-card">
+        <h3><i class="far fa-question-circle"></i> ¿Qué pasa si no tengo mi certificado de secundaria?</h3>
+        <p>Puedes iniciar con constancia de estudios en trámite, pero deberás entregar el certificado antes de concluir el primer cuatrimestre para que puedas recibir tus calificaciones oficiales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="adm-quarters-section">
+  <div class="adm-container">
+    <h2 class="adm-section-title">Periodos Académicos</h2>
+    <p class="adm-section-description">Nuestro innovador sistema cuatrimestral te permite comenzar cuando mejor te convenga</p>
+    
+    <div class="adm-quarters-grid">
+      <div class="adm-quarter-card">
+        <h3 class="adm-quarter-title">Enero - Abril</h3>
+        <p class="adm-quarter-dates">Inscripciones: Noviembre - Diciembre</p>
+        <div class="quarter-stats">
+          <div class="stat-item">
+            <i class="fas fa-users"></i>
+            <span>120+ estudiantes</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>92% de aprobación</span>
+          </div>
+        </div>
+        <span class="adm-quarter-status adm-status-past">Periodo concluido</span>
+      </div>
+      
+      <div class="adm-quarter-card adm-current-quarter">
+        <h3 class="adm-quarter-title">Mayo - Agosto</h3>
+        <p class="adm-quarter-dates">Inscripciones: Marzo - Abril</p>
+        <div class="quarter-stats">
+          <div class="stat-item">
+            <i class="fas fa-users"></i>
+            <span>85 estudiantes inscritos</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-clock"></i>
+            <span>Cupo limitado</span>
+          </div>
+        </div>
+        <span class="adm-quarter-status adm-status-current">Inscripciones abiertas</span>
+        <a href="Formulario_registro.html" class="adm-quarter-button">Inscribirme ahora</a>
+        <p class="quarter-deadline"><i class="far fa-calendar-alt"></i> Cierre de inscripciones: 30 de abril</p>
+      </div>
+      
+      <div class="adm-quarter-card">
+        <h3 class="adm-quarter-title">Septiembre - Diciembre</h3>
+        <p class="adm-quarter-dates">Inscripciones: Julio - Agosto</p>
+        <div class="quarter-stats">
+          <div class="stat-item">
+            <i class="fas fa-bell"></i>
+            <span>Próximamente</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-envelope"></i>
+            <span>Avisarme cuando abra</span>
+          </div>
+        </div>
+        <span class="adm-quarter-status adm-status-upcoming">Próximo periodo</span>
+      </div>
+    </div>
+    
+    <div class="adm-testimonials">
+      <h3>Testimonios de nuestros estudiantes</h3>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left"></i>
+            <p>CEMSS Virtual me permitió trabajar y estudiar al mismo tiempo. Los profesores siempre están disponibles para resolver dudas.</p>
+          </div>
+          <div class="testimonial-author">
+            <strong>Ana M.</strong>
+            <span>Estudiante de 2° cuatrimestre</span>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left"></i>
+            <p>Como madre soltera, necesitaba flexibilidad. Esta preparatoria virtual ha sido la solución perfecta para mi situación.</p>
+          </div>
+          <div class="testimonial-author">
+            <strong>María L.</strong>
+            <span>Egresada 2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer (manteniendo tus clases originales) -->
+<div class="footer-container">
+  <div class="footer-content">
+    <!-- Sección de Logo y Redes -->
+    <div class="footer-section">
+       <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+      <h3>Síguenos</h3>
+      <div class="social-links">
+        <a href="#" class="social-link">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="#" class="social-link">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+
+    <!-- Sección de Contacto -->
+    <div class="footer-section">
+      <h3>Contacto</h3>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> contacto@cemss.edu.mx</p>
+        <p><i class="fas fa-phone"></i> 55 1234 5678</p>
+        <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 - 18:00 hrs</p>
+      </div>
+    </div>
+
+     <!-- Sección Conócenos -->
+    <div class="footer-section">
+      <h3>Conócenos</h3>
+      <ul class="footer-links">
+        <li><a href="conocenos.html#quienes-somos"><i class="fas fa-users"></i> Quiénes somos</a></li>
+        <li><a href="conocenos.html#vision"><i class="fas fa-eye"></i> Nuestra visión</a></li>
+        <li><a href="conocenos.html#mision"><i class="fas fa-bullseye"></i> Misión</a></li>
+        <li><a href="conocenos.html#valores"><i class="fas fa-gem"></i> Valores</a></li>
+        <li><a href="conocenos.html#historia"><i class="fas fa-history"></i> Historia</a></li>
+      </ul>
+    </div>
+    <!-- Sección de Enlaces Rápidos -->
+    <div class="footer-section">
+      <h3>Enlaces rápidos</h3>
+      <ul class="footer-links">
+        <li><a href="#"><i class="fas fa-shield-alt"></i> Aviso de privacidad</a></li>
+        <li><a href="#"><i class="fas fa-search"></i> Transparencia</a></li>
+        <li><a href="#"><i class="fas fa-user-shield"></i> Protocolo de seguridad</a></li>
+        <li><a href="#"><i class="fas fa-graduation-cap"></i> Oferta educativa</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer inferior -->
+  <div class="footer-bottom">
+    <div class="copyright">
+      <p>© 2023 CEMSS - Centro de Estudios Modernos Superiores. Todos los derechos reservados.</p>
+    </div>
+    <div class="legal-links">
+      <a href="#">Términos y condiciones</a> | 
+      <a href="#">Política de privacidad</a> | 
+      <a href="#">Mapa del sitio</a>
+    </div>
+  </div>
+</div>
+
+<script src="Script_lineas.js"></script>
+<script src="script.js"></script>
+<script src="Menu.js"></script>
+<script src="inf_admi.js"></script>
+</body>
+</html>

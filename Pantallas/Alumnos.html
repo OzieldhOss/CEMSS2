@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CEMSS - Panel del Alumno</title>
+  <link rel="stylesheet" href="Estilos_inicio.css">
+  <link rel="stylesheet" href="Alumnos.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
+    </div>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-right-group">
+  <div class="nav-buttons desktop-menu">
+    <a href="Bienvenida.html">
+      <button class="nav-btn" id="plan-btn">Inicio</button>
+    </a>
+    <a href="Perfil.html">
+      <button class="nav-btn" id="plan-btn">Perfil</button>
+    </a>
+    <div class="dropdown">
+      <button class="nav-btn dropdown-toggle" id="admision-btn">Calificaciones</button>
+      <div class="dropdown-menu">
+        <a href="Calificaciones_Actual.html" class="dropdown-item">Cuatrimestre actual</a>
+        <a href="Calificaciones_historial.html" class="dropdown-item">Historial academico</a>
+      </div>
+    </div>
+     <a href="Bienvenida.html">
+      <button class="nav-btn" id="plan-btn" style="color: red; border-radius: 3px white;">Cerrar Sesión</button>
+    </a>
+  </div>
+
+  <div class="notification-container">
+  <div class="notification-bell" id="notificationBell">
+    <span class="bell-icon">🔔</span>
+    <span class="notification-badge" id="notificationBadge">3</span>
+  </div>
+  <div class="notification-panel" id="notificationPanel">
+    <div class="notification-header">
+      <h4>Notificaciones</h4>
+      <button class="close-notifications" id="closeNotifications">×</button>
+    </div>
+    <div class="notification-list">
+      <!-- Las notificaciones se generarán dinámicamente aquí -->
+    </div>
+  </div>
+</div>
+          
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Inicio.html" class="mobile-menu-item">Inicio</a>
+        <a href="Perfil.html" class="mobile-menu-item">Perfil</a>
+        <a href="Calificaciones_Actual.html" class="mobile-menu-item">Cuatrimestre actual</a>
+        <a href="Calificaciones_historial.html" class="mobile-menu-item">Historial academico</a>
+    </div>
+  </div>
+</nav>  
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="dashboard-container">
+    <!-- Barra lateral con materias -->
+    <aside class="sidebar" id="sidebar">
+      <button class="close-sidebar" id="close-sidebar">×</button>
+      <h3>Tus Materias</h3>
+      <div class="materias-list">
+        <div class="materia-card" data-materia="matematicas">
+          <div class="materia-header">
+            <div>
+              <h4>Matemáticas IV</h4>
+              <p>Prof. Laura Méndez</p>
+            </div>
+            <div class="progreso-materia-container">
+              <div class="progreso-materia-bar" style="width: 65%"></div>
+              <div class="progreso-materia-estrella">⭐</div>
+            </div>
+          </div>
+          <div class="materia-info">
+            <span class="horario">Lun/Mie 10:00-11:30</span>
+            <span class="estado activa">En curso</span>
+          </div>
+        </div>
+        
+        <div class="materia-card active" data-materia="fisica">
+          <div class="materia-header">
+            <div>
+              <h4>Física III</h4>
+              <p>Prof. Carlos Ruiz</p>
+            </div>
+            <div class="progreso-materia-container">
+              <div class="progreso-materia-bar" style="width: 30%"></div>
+              <div class="progreso-materia-estrella">⭐</div>
+            </div>
+          </div>
+          <div class="materia-info">
+            <span class="horario">Mar/Jue 14:00-15:30</span>
+            <span class="estado activa">En curso</span>
+          </div>
+        </div>
+        
+        <div class="materia-card" data-materia="literatura">
+          <div class="materia-header">
+            <div>
+              <h4>Literatura Universal</h4>
+              <p>Prof. Ana Torres</p>
+            </div>
+            <div class="progreso-materia-container">
+              <div class="progreso-materia-bar" style="width: 10%"></div>
+              <div class="progreso-materia-estrella">⭐</div>
+            </div>
+          </div>
+          <div class="materia-info">
+            <span class="horario">Vie 09:00-12:00</span>
+            <span class="estado activa">En curso</span>
+          </div>
+        </div>
+        
+        <div class="materia-card" data-materia="quimica">
+          <div class="materia-header">
+            <div>
+              <h4>Química II</h4>
+              <p>Prof. Jorge Sánchez</p>
+            </div>
+            <div class="progreso-materia-container">
+              <div class="progreso-materia-bar" style="width: 0%"></div>
+              <div class="progreso-materia-estrella">⭐</div>
+            </div>
+          </div>
+          <div class="materia-info">
+            <span class="horario">Mar/Vie 16:00-17:30</span>
+            <span class="estado por-iniciar">Por iniciar</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Contenido central con actividades -->
+    <main class="main-content">
+      <div class="welcome-banner">
+        <h1>Bienvenido, <span id="student-name">Ernesto Pérez</span></h1>
+        <p>Cuatrimestre: <strong>Cuarto 2025</strong></p>
+      </div>
+      
+      <button class="show-sidebar-btn" id="show-sidebar-btn">Ver Materias</button>
+      
+      <section class="actividades-section">
+        <div class="materia-header-main">
+          <h2>Actividades: <span id="materia-actual">Física III</span></h2>
+          <div class="progreso-materia-main-container">
+            <div class="progreso-materia-main-bar" style="width: 30%"></div>
+            <div class="progreso-materia-main-estrella">⭐</div>
+          </div>
+        </div>
+        
+        <div class="actividades-container">
+          <!-- Actividades de Física III (mostradas por defecto) -->
+          <div class="actividades-materia" data-materia="fisica">
+            <div class="actividad-item urgente">
+              <div class="actividad-info">
+                <h3>Tarea: Problemas de Física</h3>
+                <p class="descripcion">Resolver los problemas del capítulo 4 sobre termodinámica</p>
+                <div class="meta-info">
+                  <span class="fecha">Vence: 15 Nov 2025</span>
+                  <button class="actividad-btn">Entregar</button>
+                </div>
+                <div class="actividad-puntuacion">
+                  <span class="puntuacion-valor">8.5</span>/10
+                </div>
+              </div>
+              <div class="comment-section" style="display: none;"></div>
+            </div>
+            
+             <div class="actividad-item">
+                  <div class="actividad-info">
+                    <h3>Examen Parcial</h3>
+                    <p class="descripcion">Examen parcial de Matemáticas IV (Unidades 1-3)</p>
+                    <div class="meta-info">
+                      <span class="fecha">20 Nov 2025</span>
+                      <button class="actividad-btn">Estudiar</button>
+                    </div>
+                    <div class="actividad-puntuacion">
+                      <span class="puntuacion-valor">N/A</span>
+                    </div>
+                  </div>
+                  <div class="comment-section" data-comment-id="fake-comment-1" style="display: none;">
+                    <div class="comment-item">
+                      <p class="comment-author"><strong>Prof. Carlos Ruiz</strong></p>
+                      <p class="comment-text">"Recuerda incluir todos los pasos de desarrollo en tu solución."</p>
+                      <span class="comment-time">Hace 2 horas</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-section" style="display: none;"></div>
+              </div>
+          
+          <!-- Actividades de Matemáticas IV -->
+          <div class="actividades-materia" data-materia="matematicas" style="display:none;">
+            <div class="actividad-item">
+              <div class="actividad-info">
+                <h3>Ejercicios de Álgebra</h3>
+                <p class="descripcion">Resolver los ejercicios 1-20 del capítulo 3</p>
+                <div class="meta-info">
+                  <span class="fecha">Vence: 18 Nov 2025</span>
+                  <button class="actividad-btn">Entregar</button>
+                </div>
+              </div>
+                <div class="comment-section" style="display: none;"></div>
+            </div>
+            
+            <div class="actividad-item">
+              <div class="actividad-info">
+                <h3>Proyecto Final</h3>
+                <p class="descripcion">Desarrollo del proyecto de cálculo integral</p>
+                <div class="meta-info">
+                  <span class="fecha">30 Nov 2025</span>
+                  <button class="actividad-btn">Comenzar</button>
+                </div>
+              </div>
+            </div>
+              <div class="comment-section" style="display: none;"></div>
+          </div>
+          
+          <!-- Actividades de Literatura Universal -->
+          <div class="actividades-materia" data-materia="literatura" style="display:none;">
+            <div class="actividad-item">
+              <div class="actividad-info">
+                <h3>Ensayo Literario</h3>
+                <p class="descripcion">Ensayo sobre el realismo mágico en la literatura latinoamericana</p>
+                <div class="meta-info">
+                  <span class="fecha">25 Nov 2025</span>
+                  <button class="actividad-btn">Comenzar</button>
+                </div>
+              </div>
+                <div class="comment-section" style="display: none;"></div>
+            </div>
+            
+            <div class="actividad-item">
+              <div class="actividad-info">
+                <h3>Lectura Obligatoria</h3>
+                <p class="descripcion">Leer "Cien años de soledad" (Primera mitad)</p>
+                <div class="meta-info">
+                  <span class="fecha">22 Nov 2025</span>
+                  <button class="actividad-btn">Marcar como leído</button>
+                </div>
+              </div>
+            </div>
+              <div class="comment-section" style="display: none;"></div>
+          </div>
+          
+          <!-- Actividades de Química II -->
+          <div class="actividades-materia" data-materia="quimica" style="display:none;">
+            <div class="actividad-item">
+              <div class="actividad-info">
+                <h3>Práctica de Laboratorio</h3>
+                <p class="descripcion">Práctica #3: Reacciones químicas endotérmicas y exotérmicas</p>
+                <div class="meta-info">
+                  <span class="fecha">30 Nov 2025</span>
+                  <button class="actividad-btn">Preparar</button>
+                </div>
+              </div>
+                <div class="comment-section" style="display: none;"></div>
+            </div>
+            
+            <div class="actividad-item">
+              <div class="actividad-info">
+                <h3>Investigación</h3>
+                <p class="descripcion">Investigar sobre la tabla periódica de los elementos</p>
+                <div class="meta-info">
+                  <span class="fecha">28 Nov 2025</span>
+                  <button class="actividad-btn">Entregar</button>
+                </div>
+              </div>
+                <div class="comment-section" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="Alumnos.js"></script>
+  <script src="Menu.js"></script>
+</body>
+</html>
