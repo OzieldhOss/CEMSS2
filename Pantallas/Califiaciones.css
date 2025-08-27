@@ -19,6 +19,8 @@
   --pending-color: #95a5a6;
   --shadow: 0 2px 8px rgba(0,0,0,0.1);
   --transition: all 0.3s ease;
+  --title-font: 'Georgia', serif;
+  --text-font: 'Havana', sans-serif;
 }
 
 body {
@@ -378,3 +380,31 @@ body {
     min-width: 150px;
   }
 }
+
+/* Aplicar Georgia a todos los títulos */
+.grade-title,
+.section-heading,
+.term-header h3,
+.table-head .subject-cell,
+.table-head .mark-cell,
+.average-text,
+.general-average h3,
+.action-button {
+  font-family: var(--title-font);
+  font-weight: 700;
+}
+
+/* Aplicar Havana al texto normal */
+body,
+.data-label,
+.data-value,
+.term-info,
+.table-line .subject-cell,
+.table-line .mark-cell,
+.average-number,
+.state-cell,
+.action-buttons {
+  font-family: var(--text-font);
+  font-weight: 400;
+}
+

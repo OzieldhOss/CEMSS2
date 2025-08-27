@@ -1,3 +1,8 @@
+:root{
+    --title-font: 'Georgia', serif;
+    --text-font: 'Havana', sans-serif;
+}
+
 /* Estilos para el formulario de login */
 .login-container {
     display: flex;
@@ -182,4 +187,21 @@
     .forgot-password {
         margin-top: 10px;
     }
+}
+
+.login-title {
+    font-family: var(--title-font);
+    font-weight: 700;
+}
+
+body, 
+.form-group label, 
+.form-group input, 
+.form-options, 
+.remember-me, 
+.forgot-password, 
+.login-btn, 
+.back-btn, 
+.login-footer {
+    font-family: var(--text-font);
 }

@@ -240,3 +240,39 @@ document.addEventListener('DOMContentLoaded', function() {
   // Inicializar
   renderNotifications();
 });
+// Agrega esto al final del event listener DOMContentLoaded, antes del cierre });
+
+// ===== MANEJO DE PESTAÑAS DE PARCIALES =====
+const parcialTabs = document.querySelectorAll('.parcial-tab');
+const actividadesParciales = document.querySelectorAll('.actividades-parcial');
+
+function setActiveParcial(tab) {
+  // Remover clase active de todas las pestañas
+  parcialTabs.forEach(t => t.classList.remove('active'));
+  
+  // Añadir clase active a la pestaña seleccionada
+  tab.classList.add('active');
+  
+  // Ocultar todos los contenidos de parciales
+  actividadesParciales.forEach(ap => {
+    ap.style.display = 'none';
+  });
+  
+  // Mostrar el contenido del parcial seleccionado
+  const parcialId = tab.getAttribute('data-parcial');
+  const parcialContent = document.querySelector(`.actividades-parcial[data-parcial="${parcialId}"]`);
+  if (parcialContent) {
+    parcialContent.style.display = 'block';
+  }
+}
+
+parcialTabs.forEach(tab => {
+  tab.addEventListener('click', function() {
+    setActiveParcial(this);
+  });
+});
+
+// Inicializar con el primer parcial activo
+if (parcialTabs.length > 0) {
+  setActiveParcial(parcialTabs[0]);
+}

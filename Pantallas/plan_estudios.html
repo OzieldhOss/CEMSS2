@@ -6,6 +6,8 @@
   <title>CEMSS - Plan de Estudios</title>
   <link rel="stylesheet" href="Plan_estudios.css">
   <link rel="stylesheet" href="Estilos_inicio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=PT+Serif&display=swap" rel="stylesheet">
+    <link href=" https://fonts.cdnfonts.com/css/havana " rel="hoja de estilo">
 </head>
 <body>
   <canvas id="animatedBackground"></canvas>
@@ -14,7 +16,7 @@
    <nav class="sticky-nav">
   <div class="nav-container">
     <div class="logo">
-      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <img src="logo_white.png" alt="Logo CEMSS" class="logo-cemss">
       <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
     </div>
     
@@ -45,8 +47,8 @@
     <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
       <div class="mobile-menu" id="mobileMenu">
         <!-- Botones principales (como en desktop) -->
+        <a href="Inicio.html" class="mobile-menu-item">Inicio</a>
         <a href="Inf_admision.html" class="mobile-menu-item">Admisiones</a>
-        <a href="plan_estudios.html" class="mobile-menu-item">Plan de Estudios</a>
       <a href="Formulario_Alumnos.html" class="mobile-menu-item">Alumnos</a>
       <a href="Formulario_Maestro.html" class="mobile-menu-item">Maestros</a>
     </div>
@@ -83,55 +85,213 @@
         ;">Conoce nuestra estructura académica diseñada para tu éxito</p>
     </section>
 
-    <!-- Sección de información general -->
-    <section class="pl-section">
-      <h2 class="pl-section-title">Estructura del Plan de Estudios</h2>
-      <div class="pl-features-grid">
-        <div class="pl-feature-card">
-          <div class="pl-feature-icon">📅</div>
-          <h3 class="pl-feature-title">Duración</h3>
-          <p class="pl-feature-text">6 cuatrimestres (2 años).</p>
-        </div>
-        <div class="pl-feature-card">
-          <div class="pl-feature-icon">📚</div>
-          <h3 class="pl-feature-title">Materias</h3>
-          <p class="pl-feature-text">Total de 42 materias distribuidas estratégicamente.</p>
-        </div>
-        <div class="pl-feature-card">
-          <div class="pl-feature-icon">🎯</div>
-          <h3 class="pl-feature-title">Enfoque</h3>
-          <p class="pl-feature-text">Constructivista-Humanista.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección de cuatrimestres -->
-    <section class="pl-quarters-section">
-      <h2 class="pl-section-title">Plan de estudios</h2>
-      <div class="pl-quarters-grid">
-        <!-- Cuatrimestre 1-5 -->
-        <div class="pl-quarter-card">
-          <h3 class="pl-quarter-title">Cuatrimestres 1-5</h3>
-          <div class="pl-quarter-details">
-            <p class="pl-quarter-text"><strong>8 materias</strong> por cuatrimestre</p>
-            <p class="pl-quarter-text"><strong>2 materias</strong> por mes</p>
-            <p class="pl-quarter-text">Evaluaciones por bloque</p>
-            <p class="pl-quarter-text">Actividades complementarias</p>
-          </div>
-        </div>
+    <!-- Tabla de plan de estudios -->
+<!-- Tabla de plan de estudios para móviles -->
+<section class="pl-mobile-table-section">
+  <h2 class="pl-section-title">Plan de Estudios por Cuatrimestre</h2>
+  
+  <!-- Selector de cuatrimestre -->
+  <div class="pl-quarter-selector">
+    <button class="pl-quarter-btn active" data-quarter="1">1°</button>
+    <button class="pl-quarter-btn" data-quarter="2">2°</button>
+    <button class="pl-quarter-btn" data-quarter="3">3°</button>
+    <button class="pl-quarter-btn" data-quarter="4">4°</button>
+    <button class="pl-quarter-btn" data-quarter="5">5°</button>
+    <button class="pl-quarter-btn" data-quarter="6">6°</button>
+  </div>
+  
+  <!-- Contenedor de tarjetas por cuatrimestre -->
+  <div class="pl-quarter-cards">
+    <!-- Cuatrimestre 1 -->
+    <div class="pl-quarter-card active" data-quarter="1">
+      <h3 class="pl-quarter-card-title">Primer Cuatrimestre</h3>
+      <div class="pl-subjects-list">
+        <div class="pl-subject-category">Lengua y comunicación</div>
+        <div class="pl-subject">Lengua y comunicación I</div>
+        <div class="pl-subject">Inglés I</div>
         
-        <!-- Cuatrimestre 6 -->
-        <div class="pl-quarter-card">
-          <h3 class="pl-quarter-title">Cuatrimestre 6</h3>
-          <div class="pl-quarter-details">
-            <p class="pl-quarter-text"><strong>2 materias</strong> primeros 3 parciales</p>
-            <p class="pl-quarter-text"><strong>1 materia</strong> último parcial</p>
-            <p class="pl-quarter-text">Enfoque en proyectos finales</p>
-            <p class="pl-quarter-text">Preparación para titulación</p>
-          </div>
-        </div>
+        <div class="pl-subject-category">Pensamiento matemático</div>
+        <div class="pl-subject">Pensamiento matemático I</div>
+        
+        <div class="pl-subject-category">Cultura digital</div>
+        <div class="pl-subject">Cultura digital I</div>
+        
+        <div class="pl-subject-category">Ciencias naturales</div>
+        <div class="pl-subject">La materia y sus interacciones</div>
+        
+        <div class="pl-subject-category">Humanidades</div>
+        <div class="pl-subject">Humanidades I</div>
+        
+        <div class="pl-subject-category">Ciencias sociales</div>
+        <div class="pl-subject">Ciencias sociales I</div>
+        <div class="pl-subject">Laboratorio de investigación</div>
+        
+        <div class="pl-subject-category">Formación socioemocional</div>
+        <div class="pl-subject">Formación socioemocional I</div>
       </div>
-    </section>
+    </div>
+    
+<!-- Cuatrimestre 2 -->
+    <div class="pl-quarter-card" data-quarter="2">
+      <h3 class="pl-quarter-card-title">Segundo Cuatrimestre</h3>
+      <div class="pl-subjects-list">
+        <div class="pl-subject-category">Lengua y comunicación</div>
+        <div class="pl-subject">Lengua y comunicación II</div>
+        <div class="pl-subject">Inglés II</div>
+        
+        <div class="pl-subject-category">Pensamiento matemático</div>
+        <div class="pl-subject">Pensamiento matemático II</div>
+        
+        <div class="pl-subject-category">Cultura digital</div>
+        <div class="pl-subject">Cultura digital II</div>
+        
+        <div class="pl-subject-category">Ciencias naturales</div>
+        <div class="pl-subject">Conservación de la energía y sus interacciones con la materia</div>
+        <div class="pl-subject">Taller de ciencias I</div>
+        
+        <div class="pl-subject-category">Humanidades</div>
+        <div class="pl-subject">Humanidades II</div>
+        
+        <div class="pl-subject-category">Ciencias sociales</div>
+        <div class="pl-subject">Ciencias sociales II</div>
+        
+        <div class="pl-subject-category">Formación socioemocional</div>
+        <div class="pl-subject">Formación socioemocional II</div>
+      </div>
+    </div>
+    
+    <!-- Cuatrimestre 3 -->
+    <div class="pl-quarter-card" data-quarter="3">
+      <h3 class="pl-quarter-card-title">Tercer Cuatrimestre</h3>
+      <div class="pl-subjects-list">
+        <div class="pl-subject-category">Lengua y comunicación</div>
+        <div class="pl-subject">Lengua y comunicación III</div>
+        <div class="pl-subject">Inglés III</div>
+        
+        <div class="pl-subject-category">Pensamiento matemático</div>
+        <div class="pl-subject">Pensamiento matemático III</div>
+        
+        <div class="pl-subject-category">Ciencias naturales</div>
+        <div class="pl-subject">Ecosistemas: Interacciones, energía y dinámica</div>
+        <div class="pl-subject">Taller de ciencias II</div>
+        
+        <div class="pl-subject-category">Humanidades</div>
+        <div class="pl-subject">Humanidades III</div>
+        
+        <div class="pl-subject-category">Competencias laborales básicas</div>
+        <div class="pl-subject">Emprendimiento y empresa</div>
+        <div class="pl-subject">Proceso administrativo</div>
+        
+        <div class="pl-subject-category">Formación socioemocional</div>
+        <div class="pl-subject">Formación socioemocional III</div>
+      </div>
+    </div>
+    
+    <!-- Cuatrimestre 4 -->
+    <div class="pl-quarter-card" data-quarter="4">
+      <h3 class="pl-quarter-card-title">Cuarto Cuatrimestre</h3>
+      <div class="pl-subjects-list">
+        <div class="pl-subject-category">Lengua y comunicación</div>
+        <div class="pl-subject">Inglés IV</div>
+        
+        <div class="pl-subject-category">Pensamiento matemático</div>
+        <div class="pl-subject">Temas selectos de matemáticas I</div>
+        
+        <div class="pl-subject-category">Conciencia histórica</div>
+        <div class="pl-subject">Conciencia histórica I: Perspectivas del México antiguo</div>
+        
+        <div class="pl-subject-category">Cultura digital</div>
+        <div class="pl-subject">Taller de cultura digital</div>
+        
+        <div class="pl-subject-category">Ciencias naturales</div>
+        <div class="pl-subject">Interacciones químicas: conservación de la materia en la formación de nuevas sustancias</div>
+        <div class="pl-subject">Espacio y sociedad</div>
+        
+        <div class="pl-subject-category">Humanidades</div>
+        <div class="pl-subject">Pensamiento literario</div>
+        
+        <div class="pl-subject-category">Ciencias sociales</div>
+        <div class="pl-subject">Ciencias sociales III</div>
+        
+        <div class="pl-subject-category">Recurso o área a elegir</div>
+        <div class="pl-subject">Salud Integral I</div>
+        <div class="pl-subject">Taller de Probabilidad y Estadística I</div>
+        <div class="pl-subject">Procesos Contables I</div>
+        
+        <div class="pl-subject-category">Competencias laborales básicas</div>
+        <div class="pl-subject">Legalidad empresarial</div>
+        <div class="pl-subject">Mercadotecnia</div>
+        
+        <div class="pl-subject-category">Formación socioemocional</div>
+        <div class="pl-subject">Formación socioemocional IV</div>
+      </div>
+    </div>
+    
+    <!-- Cuatrimestre 5 -->
+    <div class="pl-quarter-card" data-quarter="5">
+      <h3 class="pl-quarter-card-title">Quinto Cuatrimestre</h3>
+      <div class="pl-subjects-list">
+        <div class="pl-subject-category">Conciencia histórica</div>
+        <div class="pl-subject">Conciencia histórica II: México durante el encantamiento</div>
+        
+        <div class="pl-subject-category">Ciencias naturales</div>
+        <div class="pl-subject">La energía en los procesos de la vida diaria</div>
+        
+        <div class="pl-subject-category">Lengua y comunicación</div>
+        <div class="pl-subject">Inglés V</div>
+        
+        <div class="pl-subject-category">Recurso o área a elegir</div>
+        <div class="pl-subject">Salud Integral II</div>
+        <div class="pl-subject">Taller de Probabilidad y Estadística II</div>
+        <div class="pl-subject">Procesos Contables II</div>
+        
+        <div class="pl-subject-category">Competencias laborales básicas</div>
+        <div class="pl-subject">Finanzas</div>
+        <div class="pl-subject">Ventas y difusión</div>
+        
+        <div class="pl-subject-category">Formación socioemocional</div>
+        <div class="pl-subject">Formación socioemocional V</div>
+      </div>
+    </div>
+    
+    <!-- Cuatrimestre 6 -->
+    <div class="pl-quarter-card" data-quarter="6">
+      <h3 class="pl-quarter-card-title">Sexto Cuatrimestre</h3>
+      <div class="pl-subjects-list">
+        <div class="pl-subject-category">Pensamiento matemático</div>
+        <div class="pl-subject">Temas selectos de matemáticas II</div>
+        
+        <div class="pl-subject-category">Conciencia histórica</div>
+        <div class="pl-subject">Conciencia histórica III: La realidad actual en perspectiva</div>
+        
+        <div class="pl-subject-category">Ciencias naturales</div>
+        <div class="pl-subject">Organismos: estructuras y procesos: Herencia evolución biológica</div>
+        
+        <div class="pl-subject-category">Lengua y comunicación</div>
+        <div class="pl-subject">Inglés VI</div>
+        
+        <div class="pl-subject-category">Competencias laborales básicas</div>
+        <div class="pl-subject">Comunicación de la empresa</div>
+        <div class="pl-subject">Proyecto emprendedor</div>
+        
+        <div class="pl-subject-category">Formación socioemocional</div>
+        <div class="pl-subject">Formación socioemocional VI</div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</section>
+
+<!-- NUEVA Tabla de plan de estudios para desktop -->
+<!-- NUEVO Diseño de cartas por cuatrimestre para desktop -->
+<section class="pl-desktop-table-section">
+  <h2 class="pl-section-title">Plan de Estudios por Cuatrimestre</h2>
+  
+  <div class="pl-quarters-grid-desktop">
+    <!-- Las cartas se generarán dinámicamente con JavaScript -->
+  </div>
+</section>
 
     <!-- Proceso de aprendizaje -->
     <section class="pl-process-section">
@@ -161,7 +321,7 @@
         <div class="pl-step">
           <div class="pl-step-number">4</div>
           <div class="pl-step-content">
-            <h3 class="pl-step-title">Examenes Parciales</h3>
+            <h3 class="pl-step-title">Exámenes Parciales</h3>
             <p class="pl-step-text">Evaluación integral que abarca todas las progesiones por materia.</p>
           </div>
         </div>
@@ -206,7 +366,7 @@
     <section class="pl-cta-section">
       <h2 class="pl-section-title">¿Listo para comenzar?</h2>
       <p class="pl-cta-text">Inscríbete ahora y forma parte de nuestra comunidad educativa</p>
-      <button class="pl-cta-btn" onclick="window.location.href='Formulario_registro.html'">Inscríbete Ahora</button>
+      <button class="pl-cta-btn" onclick="window.location.href='Inicio.html#calendario'">Inscríbete Ahora</button>
     </section>
   </div>
 
@@ -255,10 +415,8 @@
     <div class="footer-section">
       <h3>Enlaces rápidos</h3>
       <ul class="footer-links">
-        <li><a href="#"><i class="fas fa-shield-alt"></i> Aviso de privacidad</a></li>
-        <li><a href="#"><i class="fas fa-search"></i> Transparencia</a></li>
-        <li><a href="#"><i class="fas fa-user-shield"></i> Protocolo de seguridad</a></li>
-        <li><a href="#"><i class="fas fa-graduation-cap"></i> Oferta educativa</a></li>
+        <li><a href="Aviso_privacidad.html"><i class="fas fa-shield-alt"></i> Aviso de privacidad</a></li>
+        <li><a href="plan_estudios.html"><i class="fas fa-graduation-cap"></i> Oferta educativa</a></li>
       </ul>
     </div>
   </div>
@@ -269,12 +427,12 @@
       <p>© 2023 CEMSS - Centro de Estudios Modernos Superiores. Todos los derechos reservados.</p>
     </div>
     <div class="legal-links">
-      <a href="#">Términos y condiciones</a> | 
-      <a href="#">Política de privacidad</a> | 
-      <a href="#">Mapa del sitio</a>
+      <a href="Terminos.html">Términos y condiciones</a> | 
+      <a href="Aviso_privacidad.html">Política de privacidad</a> 
     </div>
   </div>
 </div>
   <script src="plan_estudio.js"></script>
+  <script src="Menu.js"></script>
 </body>
 </html>

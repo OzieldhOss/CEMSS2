@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="Estilos_inicio.css">
   <link rel="stylesheet" href="Inf_admision.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href=" https://fonts.cdnfonts.com/css/havana " rel="hoja de estilo">
 </head>
 <body>
 <canvas id="animatedBackground"></canvas>
@@ -17,7 +18,7 @@
    <nav class="sticky-nav">
   <div class="nav-container">
     <div class="logo">
-      <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+      <img src="logo_white.png" alt="Logo CEMSS" class="logo-cemss">
       <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
     </div>
     
@@ -66,7 +67,7 @@
       <div class="adm-hero-features">
         <div class="feature-item">
           <i class="fas fa-check-circle"></i>
-          <span>Preparatoria completa en 2 años 4 meses</span>
+          <span>Preparatoria en 2 años </span>
         </div>
         <div class="feature-item">
           <i class="fas fa-check-circle"></i>
@@ -148,7 +149,7 @@
       <div class="adm-step-card">
         <div class="adm-step-number">3</div>
         <h3 class="adm-step-title">Pago de inscripción</h3>
-        <p class="adm-step-text">Realiza el pago correspondiente mediante transferencia bancaria, depósito o tarjeta de crédito.</p>
+        <p class="adm-step-text">Realiza el pago correspondiente mediante transferencia bancaria o depósito en tiendas de conveniencia.</p>
         <div class="step-duration">
           <i class="far fa-clock"></i> Proceso inmediato
         </div>
@@ -179,11 +180,11 @@
       <div class="adm-docs-card">
         <h3 class="adm-docs-title"><i class="fas fa-file-alt"></i> Documentos básicos</h3>
         <ul class="adm-docs-list">
-          <li><i class="fas fa-check-circle"></i> Acta de nacimiento (copia)</li>
-          <li><i class="fas fa-check-circle"></i> CURP (copia legible)</li>
+          <li><i class="fas fa-check-circle"></i> Acta de nacimiento (Digitalizada en pdf a color)</li>
+          <li><i class="fas fa-check-circle"></i> CURP (Digitalizada en pdf a color)</li>
           <li class="doc-with-btn">
             <div>
-              <i class="fas fa-check-circle"></i> Certificado de secundaria (copia)
+              <i class="fas fa-check-circle"></i> Certificado de secundaria (Digitalizada en pdf a color)
             </div>
             <button class="certificate-btn" id="certificateToggle">
               <i class="fas fa-question-circle"></i> ¿No tienes certificado?
@@ -196,7 +197,7 @@
     </div>
     
     <div class="adm-cta-container">
-      <a href="Formulario_registro.html" class="adm-cta-button">
+      <a href="#calendario" class="adm-cta-button">
         <i class="fas fa-pencil-alt"></i> Comenzar inscripción ahora
       </a>
     </div>
@@ -210,8 +211,13 @@
     
     <div class="adm-faq-grid">
       <div class="adm-faq-card">
-        <h3><i class="far fa-question-circle"></i> ¿Cuál es el costo de la inscripción?</h3>
-        <p>El costo total de la inscripción es de $1,800 pesos mexicanos, que incluye acceso a la plataforma, materiales digitales y trámites administrativos. Ofrecemos facilidades de pago.</p>
+        <h3><i class="far fa-question-circle"></i> ¿Cuál es el costo de la inscripción y de la colegiatura?</h3>
+        <p>El costo regular de la inscripción es de $1,000 y la colegiatura mensual es de $1,200.</p>
+      </div>
+      
+      <div class="adm-faq-card">
+        <h3><i class="far fa-question-circle"></i> ¿Cuál es el costo de la inscripción y de la colegiatura con beca?</h3>
+        <p>El costo de la inscripción con beca es de $350(Para primer cuatrimestre tiene un descuento del 100%) y la colegiatura con beca es de $350 mensuales, para un total de $1,400 por el cuatrimestre.</p>
       </div>
       
       <div class="adm-faq-card">
@@ -226,68 +232,27 @@
       
       <div class="adm-faq-card">
         <h3><i class="far fa-question-circle"></i> ¿Qué pasa si no tengo mi certificado de secundaria?</h3>
-        <p>Puedes iniciar con constancia de estudios en trámite, pero deberás entregar el certificado antes de concluir el primer cuatrimestre para que puedas recibir tus calificaciones oficiales.</p>
+        <p>Puedes iniciar con una constancia de estudios que indiqué que tu certificado de secundaria se encuentre en trámite, tienes 60 días de prórroga para entregar tu certificado.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="adm-quarters-section">
-  <div class="adm-container">
-    <h2 class="adm-section-title">Periodos Académicos</h2>
-    <p class="adm-section-description">Nuestro innovador sistema cuatrimestral te permite comenzar cuando mejor te convenga</p>
+<section class="quarters-section" id="calendario">
+  <h2 class="section-title">Calendario <span>Cuatrimestral</span> <span class="current-year"></span></h2>
+  
+  <!-- Mensaje sobre costos -->
+  <div class="costos-mensaje">
+    <h3>¡Aprovecha nuestros costos con beca!</h3>
+    <p><strong>Inscripción:</strong> $350 pesos (con beca)</p>
+    <p><strong>Colegiatura Mensual:</strong> $350 pesos (con beca) | Total del cuatrimestres $1,400 pesos (Con beca)</p>
+  </div>
     
-    <div class="adm-quarters-grid">
-      <div class="adm-quarter-card">
-        <h3 class="adm-quarter-title">Enero - Abril</h3>
-        <p class="adm-quarter-dates">Inscripciones: Noviembre - Diciembre</p>
-        <div class="quarter-stats">
-          <div class="stat-item">
-            <i class="fas fa-users"></i>
-            <span>120+ estudiantes</span>
-          </div>
-          <div class="stat-item">
-            <i class="fas fa-graduation-cap"></i>
-            <span>92% de aprobación</span>
-          </div>
-        </div>
-        <span class="adm-quarter-status adm-status-past">Periodo concluido</span>
-      </div>
-      
-      <div class="adm-quarter-card adm-current-quarter">
-        <h3 class="adm-quarter-title">Mayo - Agosto</h3>
-        <p class="adm-quarter-dates">Inscripciones: Marzo - Abril</p>
-        <div class="quarter-stats">
-          <div class="stat-item">
-            <i class="fas fa-users"></i>
-            <span>85 estudiantes inscritos</span>
-          </div>
-          <div class="stat-item">
-            <i class="fas fa-clock"></i>
-            <span>Cupo limitado</span>
-          </div>
-        </div>
-        <span class="adm-quarter-status adm-status-current">Inscripciones abiertas</span>
-        <a href="Formulario_registro.html" class="adm-quarter-button">Inscribirme ahora</a>
-        <p class="quarter-deadline"><i class="far fa-calendar-alt"></i> Cierre de inscripciones: 30 de abril</p>
-      </div>
-      
-      <div class="adm-quarter-card">
-        <h3 class="adm-quarter-title">Septiembre - Diciembre</h3>
-        <p class="adm-quarter-dates">Inscripciones: Julio - Agosto</p>
-        <div class="quarter-stats">
-          <div class="stat-item">
-            <i class="fas fa-bell"></i>
-            <span>Próximamente</span>
-          </div>
-          <div class="stat-item">
-            <i class="fas fa-envelope"></i>
-            <span>Avisarme cuando abra</span>
-          </div>
-        </div>
-        <span class="adm-quarter-status adm-status-upcoming">Próximo periodo</span>
-      </div>
-    </div>
+  <div class="quarters-container" id="quarters-container">
+    <!-- Las fichas se generarán automáticamente con JavaScript -->
+  </div>
+</section>
+
     
     <div class="adm-testimonials">
       <h3>Testimonios de nuestros estudiantes</h3>
@@ -306,7 +271,7 @@
         <div class="testimonial-card">
           <div class="testimonial-content">
             <i class="fas fa-quote-left"></i>
-            <p>Como madre soltera, necesitaba flexibilidad. Esta preparatoria virtual ha sido la solución perfecta para mi situación.</p>
+            <p>Como mamá estudiante, necesitaba flexibilidad. Esta preparatoria virtual ha sido la solución perfecta para mi situación.</p>
           </div>
           <div class="testimonial-author">
             <strong>María L.</strong>
@@ -363,10 +328,8 @@
     <div class="footer-section">
       <h3>Enlaces rápidos</h3>
       <ul class="footer-links">
-        <li><a href="#"><i class="fas fa-shield-alt"></i> Aviso de privacidad</a></li>
-        <li><a href="#"><i class="fas fa-search"></i> Transparencia</a></li>
-        <li><a href="#"><i class="fas fa-user-shield"></i> Protocolo de seguridad</a></li>
-        <li><a href="#"><i class="fas fa-graduation-cap"></i> Oferta educativa</a></li>
+        <li><a href="Aviso_privacidad.html"><i class="fas fa-shield-alt"></i> Aviso de privacidad</a></li>
+        <li><a href="plan_estudios.html"><i class="fas fa-graduation-cap"></i> Oferta educativa</a></li>
       </ul>
     </div>
   </div>
@@ -374,12 +337,11 @@
   <!-- Footer inferior -->
   <div class="footer-bottom">
     <div class="copyright">
-      <p>© 2023 CEMSS - Centro de Estudios Modernos Superiores. Todos los derechos reservados.</p>
+      <p>© 2025 CEMSS - Centro de Estudios Modernos Superiores. Todos los derechos reservados.</p>
     </div>
     <div class="legal-links">
-      <a href="#">Términos y condiciones</a> | 
-      <a href="#">Política de privacidad</a> | 
-      <a href="#">Mapa del sitio</a>
+      <a href="Terminos.html">Términos y condiciones</a> | 
+      <a href="Aviso_privacidad.html">Política de privacidad</a> 
     </div>
   </div>
 </div>
@@ -388,5 +350,6 @@
 <script src="script.js"></script>
 <script src="Menu.js"></script>
 <script src="inf_admi.js"></script>
+<script src="Fichas_inscripcio.js"></script>
 </body>
 </html>

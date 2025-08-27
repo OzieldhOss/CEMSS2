@@ -1,6 +1,8 @@
 /* Estilos para la sección Conócenos */
 :root{
       --light-bg: rgba(245, 245, 245, 0.85); /* Fondo semitransparente */
+      --title-font: 'Georgia', serif;
+      --text-font: 'Havana', sans-serif;
 }
 
 body {
@@ -297,6 +299,7 @@ body {
 }
 
 .cta-buttons {
+  z-index: -1;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -304,6 +307,7 @@ body {
 }
 
 .cta-btn {
+  z-index: 0;
   display: inline-block;
   padding: 15px 30px;
   border-radius: 50px;
@@ -394,8 +398,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-  background-size: cover;
+  background-size: contain;
+  background-color: rgb(13, 71, 110);
+  clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
   background-position: center;
   z-index: 1;
   filter: brightness(50%);
@@ -462,4 +467,32 @@ section:target {
 @keyframes highlight {
   0% { background-color: rgba(13, 72, 110, 0.1); }
   100% { background-color: transparent; }
+}
+
+/* Aplicar Georgia a todos los títulos */
+h1, h2, h3, h4, h5, h6,
+.cn-hero-content h1, 
+.section-title, 
+.cn-features-title, 
+.mv-card h3, 
+.value-card h3, 
+.cta-container h2,
+.footer-section h3 {
+  font-family: var(--title-font);
+  font-weight: 700; /* Negrita para títulos */
+}
+
+/* Aplicar Havana al texto normal */
+body, p, li, 
+.lead-text, 
+.cn-feature-item span, 
+.mv-card p, 
+.history-text p, 
+.value-card p,
+.cta-container p,
+.contact-info p,
+.footer-links a {
+  font-family: var(--text-font);
+  font-weight: 400;
+  line-height: 1.6; /* Mejor legibilidad */
 }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEMSS - Crear Formulario</title>
+  <link rel="stylesheet" href="Vistas2.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridstack/dist/gridstack.min.css" />
+</head>
+<body>
+  <div class="form-creator-container">
+    <!-- Panel izquierdo - Opciones de formulario -->
+    <aside class="form-options-panel">
+      <h3>Agregar elemento</h3>
+      <div class="form-option-list">
+        <button class="form-option-btn" data-type="text">
+          <span class="form-option-icon">📝</span>
+          <span>Texto</span>
+        </button>
+        <button class="form-option-btn" data-type="multiple">
+          <span class="form-option-icon">☑️</span>
+          <span>Opción múltiple</span>
+        </button>
+        <button class="form-option-btn" data-type="truefalse">
+          <span class="form-option-icon">❓</span>
+          <span>Verdadero/Falso</span>
+        </button>
+        <button class="form-option-btn" data-type="connect">
+          <span class="form-option-icon">↔️</span>
+          <span>Conectar</span>
+        </button>
+        <!-- Nuevos tipos de elementos -->
+        <button class="form-option-btn" data-type="progression">
+          <span class="form-option-icon">🔢</span>
+          <span>Progresión</span>
+        </button>
+        <button class="form-option-btn" data-type="subtitle">
+          <span class="form-option-icon">📌</span>
+          <span>Subtítulo</span>
+        </button>
+        <button class="form-option-btn" data-type="heading">
+          <span class="form-option-icon">🏷️</span>
+          <span>Título</span>
+        </button>
+        <!-- Nuevas opciones: Texto amplio e Imágenes -->
+        <button class="form-option-btn" data-type="textarea">
+          <span class="form-option-icon">📄</span>
+          <span>Texto amplio</span>
+        </button>
+        <button class="form-option-btn" data-type="image">
+          <span class="form-option-icon">🖼️</span>
+          <span>Imagen</span>
+        </button>
+      </div>
+    </aside>
+
+   <!-- Panel central -->
+    <main class="form-preview-panel">
+      <div class="form-preview-header">
+        <input type="text" class="form-title-input" placeholder="Título del formulario">
+        <textarea class="form-description-input" placeholder="Descripción del formulario"></textarea>
+      </div>
+      
+      <div class="form-grid-container">
+        <div class="grid-stack" id="formGridContainer">
+        </div>
+      </div>
+    </main>
+
+    <!-- Panel derecho - Acciones de formulario -->
+    <aside class="form-actions-panel">
+      <h3>Acciones</h3>
+      <div class="form-action-buttons">
+        <button class="form-action-btn primary" id="saveBtn">
+          <span class="form-action-icon">💾</span>
+          <span>Guardar</span>
+        </button>
+        <button class="form-action-btn" id="saveAsNewBtn">
+          <span class="form-action-icon">📄</span>
+          <span>Guardar como nuevo</span>
+        </button>
+        <button class="form-action-btn secondary" id="previewBtn">
+          <span class="form-action-icon">👁️</span>
+          <span>Vista previa</span>
+        </button>
+        <button class="form-action-btn" id="exitBtn">
+          <span class="form-action-icon">🚪</span>
+          <span>Salir</span>
+        </button>
+      </div>
+      
+      <div class="form-save-status" id="saveStatus">
+        Todos los cambios guardados
+      </div>
+    </aside>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gridstack/dist/gridstack-h5.min.js"></script>
+  <script src="vistas2.js"></script>
+</body>
+</html>

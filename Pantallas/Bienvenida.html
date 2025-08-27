@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="Bienvenida.css">
   <link rel="stylesheet" href="Estilos_inicio.css">
   <link rel="stylesheet" href="Alumnos.css"> <!-- Mantenemos el CSS original -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=PT+Serif&display=swap" rel="stylesheet">
+  <link href=" https://fonts.cdnfonts.com/css/havana " rel="hoja de estilo">
 </head>
 <body>
 
@@ -16,7 +18,7 @@
    <nav class="sticky-nav">
     <div class="nav-container">
       <div class="logo">
-        <img src="Logo.jpg" alt="Logo CEMSS" class="logo-cemss">
+        <img src="logo_white.png" alt="Logo CEMSS" class="logo-cemss">
         <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
       </div>
       
@@ -67,10 +69,11 @@
       
       <!-- Menú móvil -->
       <div class="mobile-menu" id="mobileMenu">
-        <a href="Inicio.html" class="mobile-menu-item">Inicio</a>
+        <a href="Alumnos.html" class="mobile-menu-item">Pizarra</a>
         <a href="Perfil.html" class="mobile-menu-item">Perfil</a>
         <a href="Calificaciones_Actual.html" class="mobile-menu-item">Cuatrimestre actual</a>
         <a href="Calificaciones_historial.html" class="mobile-menu-item">Historial academico</a>
+        <a href="Inicio.html" class="mobile-menu-item">Cerrar Seción</a>
       </div>
     </div>
   </nav>  
@@ -84,67 +87,120 @@
       <p class="bd-welcome-subtitle">Cuatrimestre: <strong>Cuarto 2025</strong></p>
     </div>
 
-    <!-- Sección principal -->
+    <!-- Sección principal con secciones invertidas -->
     <div class="bd-main-section">
-      <!-- Sección de noticias -->
-      <div class="bd-news-section">
-        <h2 class="bd-section-title">Noticias importantes</h2>
-        <div class="bd-news-carousel">
-          <div class="bd-news-slide bd-active">
-            <h3>Inicio de nuevo cuatrimestre</h3>
-            <p>El próximo lunes 15 de noviembre comienza el cuatrimestre. Revisa tu horario.</p>
-            <span class="bd-news-date">10 Nov 2025</span>
+      <!-- Sección de calendario (ahora primera) -->
+      <div class="bd-calendar-section">
+        <h2 class="bd-section-title">Calendario académico</h2>
+        <div class="bd-calendar-carousel">
+          <button class="bd-carousel-arrow bd-carousel-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="bd-calendar-viewport">
+            <div class="bd-calendar-annual" id="bd-calendar-annual"></div>
           </div>
-          <div class="bd-news-slide">
-            <h3>Convocatoria para becas</h3>
-            <p>Abierta la convocatoria para becas de excelencia académica. Fecha límite: 30 de noviembre.</p>
-            <span class="bd-news-date">5 Nov 2025</span>
+          <button class="bd-carousel-arrow bd-carousel-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="bd-calendar-legend">
+          <div class="bd-legend-item">
+            <span class="bd-legend-color bd-today"></span>
+            <span>Hoy</span>
           </div>
-          <div class="bd-news-slide">
-            <h3>Talleres extracurriculares</h3>
-            <p>Inscripciones abiertas para talleres de programación, robótica y emprendimiento.</p>
-            <span class="bd-news-date">1 Nov 2025</span>
+          <div class="bd-legend-item">
+            <span class="bd-legend-color bd-important-day"></span>
+            <span>Inicio de cuatrimestre</span>
           </div>
-          <div class="bd-carousel-controls">
-            <button class="bd-carousel-prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="bd-carousel-next"><i class="fas fa-chevron-right"></i></button>
+          <div class="bd-legend-item">
+            <span class="bd-legend-color bd-event-day"></span>
+            <span>Eventos</span>
           </div>
+          <!-- Contenedor para los eventos personalizados -->
+          <div id="bd-custom-legends" style="grid-column: 1 / -1; display: contents;"></div>
+        </div>
+
+        <!-- Botón para limpiar calendario (debajo de las leyendas) -->
+        <div class="bd-clear-container">
+          <button class="bd-clear-btn" id="clearCalendar">
+            <i class="fas fa-trash-alt"></i> Limpiar calendario
+          </button>
         </div>
       </div>
 
-      <!-- Sección de calendario (reemplazar esta parte) -->
-       <div class="bd-calendar-section">
-  <h2 class="bd-section-title">Calendario académico</h2>
-  
-  <div class="bd-calendar-carousel">
-    <button class="bd-carousel-arrow bd-carousel-prev">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-    
-    <div class="bd-calendar-viewport">
-      <div class="bd-calendar-annual" id="bd-calendar-annual"></div>
+     <!-- Sección de noticias (ahora segunda) -->
+<div class="bd-news-section">
+  <h2 class="bd-section-title">Noticias importantes</h2>
+  <div class="bd-news-carousel">
+    <div class="bd-news-slide bd-active">
+      <h3>Inicio de nuevo cuatrimestre</h3>
+      <p>El próximo lunes 15 de noviembre comienza el cuatrimestre. Revisa tu horario.</p>
+      <span class="bd-news-date">10 Nov 2025</span>
     </div>
-    
-    <button class="bd-carousel-arrow bd-carousel-next">
-      <i class="fas fa-chevron-right"></i>
-    </button>
+    <div class="bd-news-slide">
+      <h3>Convocatoria para becas</h3>
+      <p>Abierta la convocatoria para becas de excelencia académica. Fecha límite: 30 de noviembre.</p>
+      <span class="bd-news-date">5 Nov 2025</span>
+    </div>
+    <div class="bd-news-slide">
+      <h3>Talleres extracurriculares</h3>
+      <p>Inscripciones abiertas para talleres de programación, robótica y emprendimiento.</p>
+      <span class="bd-news-date">1 Nov 2025</span>
+    </div>
   </div>
-  
-  <div class="bd-calendar-legend">
-    <div class="bd-legend-item">
-      <span class="bd-legend-color bd-today"></span>
-      <span>Hoy</span>
-    </div>
-    <div class="bd-legend-item">
-      <span class="bd-legend-color bd-important-day"></span>
-      <span>Inicio de cuatrimestre</span>
-    </div>
-    <div class="bd-legend-item">
-      <span class="bd-legend-color bd-event-day"></span>
-      <span>Eventos</span>
-    </div>
+  <!-- Controles de navegación independientes para noticias -->
+  <div class="bd-news-controls">
+    <button class="bd-news-prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="bd-news-next"><i class="fas fa-chevron-right"></i></button>
   </div>
 </div>
+
+ <!-- Modal para agregar eventos -->
+<div class="bd-event-modal" id="eventModal">
+  <div class="bd-modal-content">
+    <span class="bd-close-modal" id="closeModal">&times;</span>
+    <h3>Agregar Evento</h3>
+    
+    <div class="bd-form-group">
+      <label for="eventTitle">Título del evento:</label>
+      <input type="text" id="eventTitle" class="bd-form-input" placeholder="Ej: Examen de Matemáticas">
+    </div>
+    
+    <div class="bd-form-row">
+      <div class="bd-form-group bd-form-group-half">
+        <label for="eventStartDate">Fecha de inicio:</label>
+        <input type="date" id="eventStartDate" class="bd-form-input">
+      </div>
+      
+      <div class="bd-form-group bd-form-group-half">
+        <label for="eventEndDate">Fecha de fin (opcional):</label>
+        <input type="date" id="eventEndDate" class="bd-form-input">
+        <small class="bd-form-hint">Dejar vacío para evento de un solo día</small>
+      </div>
+    </div>
+    
+    <div class="bd-form-group">
+      <label>Color personalizado:</label>
+      <div class="bd-color-palette">
+        <div class="bd-color-option" style="background-color: #ffebee;" data-color="#ffebee" data-text-color="#b71c1c"></div>
+        <div class="bd-color-option" style="background-color: #e8f5e9;" data-color="#e8f5e9" data-text-color="#1b5e20"></div>
+        <div class="bd-color-option" style="background-color: #e3f2fd;" data-color="#e3f2fd" data-text-color="#0d47a1"></div>
+        <div class="bd-color-option" style="background-color: #f3e5f5;" data-color="#f3e5f5" data-text-color="#4a148c"></div>
+        <div class="bd-color-option" style="background-color: #fff8e1;" data-color="#fff8e1" data-text-color="#ff6f00"></div>
+        <div class="bd-color-option" style="background-color: #d1cbef;" data-color="#d1cbef" data-text-color="#3e2723"></div>
+        <div class="bd-color-option" style="background-color: #a6e6ec;" data-color="#a6e6ec" data-text-color="#0d5257"></div>
+        <div class="bd-color-option" style="background-color: #e7b49b;" data-color="#e7b49b" data-text-color="#7d4e37"></div>
+        <div class="bd-color-option" style="background-color: #a8eba9;" data-color="#a8eba9" data-text-color="#2e7030"></div>
+        <div class="bd-color-option" style="background-color: #e0a1e2;" data-color="#e0a1e2" data-text-color="#8a3c8c"></div>
+      </div>
+    </div>
+    
+      <div class="bd-modal-actions">
+        <button class="bd-modal-btn bd-cancel-btn" id="cancelEvent">Cancelar</button>
+        <button class="bd-modal-btn bd-save-btn" id="saveEvent">Guardar Evento</button>
+      </div>
+    </div>
+  </div>
 
   <script src="Menu.js"></script>
   <script src="bienvenida.js"></script>

@@ -7,6 +7,8 @@
   --white: #ffffff;
   --shadow: 0 3px 10px rgba(0,0,0,0.1);
   --transition: all 0.3s ease;
+  --title-font: 'Georgia', serif;
+  --text-font: 'Havana', sans-serif;
 }
 
 /* Estilos base específicos para Plan de Estudios */
@@ -53,13 +55,22 @@
   margin-bottom: 20px;
   color: white;
   animation: pl-slideUp 0.8s ease-out 0.2s both;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: var(--title-font);
 }
 
 .pl-hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   max-width: 700px;
   margin-bottom: 30px;
   animation: pl-slideUp 0.8s ease-out 0.4s both;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: var(--text-font);
 }
 
 @keyframes pl-slideUp {
@@ -94,6 +105,8 @@
   color: var(--secondary-color);
   position: relative;
   padding-bottom: 15px;
+  font-family: var(--title-font);
+  font-weight: 700;
 }
 
 .pl-section-title::after {
@@ -154,10 +167,13 @@
 .pl-feature-title {
   color: var(--secondary-color);
   margin-bottom: 15px;
+  font-family: var(--title-font);
+  font-weight: 700;
 }
 
 .pl-feature-text {
   color: var(--text-color);
+  font-family: var(--text-font);
 }
 
 .pl-feature-card:hover {
@@ -211,6 +227,8 @@
 .pl-quarter-title {
   color: var(--secondary-color);
   margin-bottom: 15px;
+  font-family: var(--title-font);
+  font-weight: 700;
 }
 
 .pl-quarter-details {
@@ -220,6 +238,7 @@
 .pl-quarter-text {
   margin-bottom: 15px;
   color: var(--text-color);
+  font-family: var(--text-font);
 }
 
 .pl-quarter-card:hover {
@@ -303,16 +322,18 @@
 .pl-step-title {
   color: var(--primary-color);
   margin-bottom: 10px;
+  font-family: var(--title-font);
+  font-weight: 700;
 }
 
 .pl-step-text {
   color: var(--text-color);
+  font-family: var(--text-font);
 }
 
 /* Sección de beneficios */
 .pl-benefits-section {
   padding: 100px 20px;
-
   background-color: rgba(245, 245, 245, 0.9);
 }
 
@@ -327,6 +348,7 @@
   margin-bottom: 30px;
   color: var(--text-color);
   font-size: 1.1rem;
+  font-family: var(--text-font);
 }
 
 .pl-cta-btn {
@@ -341,6 +363,7 @@
   min-height: 44px;
   min-width: 44px;
   animation: pl-pulse 2s infinite;
+  font-family: var(--text-font);
 }
 
 @keyframes pl-pulse {
@@ -355,7 +378,314 @@
   animation: none;
 }
 
-/* ===== MEDIA QUERIES PARA MÓVIL ===== */
+/* Estilos para la tabla móvil de plan de estudios */
+.pl-mobile-table-section {
+  padding: 40px 20px;
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+.pl-quarter-selector {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.pl-quarter-btn {
+  padding: 10px 15px;
+  background-color: #e8f4ff;
+  border: 1px solid #3498db;
+  border-radius: 4px;
+  color: #2c3e50;
+  font-family: 'Havana', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.pl-quarter-btn:hover {
+  background-color: #d4e9ff;
+}
+
+.pl-quarter-btn.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.pl-quarter-cards {
+  position: relative;
+  min-height: 500px;
+}
+
+.pl-quarter-card {
+  display: none;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.pl-quarter-card.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pl-quarter-card-title {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+}
+
+.pl-quarter-uac {
+  text-align: center;
+  background-color: #3498db;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 0 auto 20px;
+  display: inline-block;
+  font-family: 'Havana', sans-serif;
+  font-weight: bold;
+}
+
+.pl-subjects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pl-subject-category {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Georgia', serif;
+}
+
+.pl-subject {
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  font-family: 'Havana', sans-serif;
+}
+
+/* ===== NUEVA TABLA DE ESCRITORIO MEJORADA ===== */
+.pl-desktop-table-section {
+  display: none;
+  padding: 80px 20px;
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+.pl-table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.pl-desktop-quarter-selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pl-desktop-quarter-btn {
+  padding: 12px 20px;
+  background-color: #e8f4ff;
+  border: 1px solid #3498db;
+  border-radius: 4px;
+  color: #2c3e50;
+  font-family: 'Havana', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 50px;
+  min-height: 44px;
+}
+
+.pl-desktop-quarter-btn:hover {
+  background-color: #d4e9ff;
+}
+
+.pl-desktop-quarter-btn.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.pl-desktop-table-content {
+  padding: 20px;
+}
+
+.pl-desktop-table-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+}
+
+.pl-desktop-subjects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.pl-desktop-subject-category {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #3498db;
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  grid-column: 1 / -1;
+}
+
+.pl-desktop-subject {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-family: 'Havana', sans-serif;
+  transition: all 0.3s ease;
+  border-left: 4px solid #3498db;
+}
+
+.pl-desktop-subject:hover {
+  background-color: #e8f4ff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.pl-desktop-uac-total {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #e8f4ff;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: 'Havana', sans-serif;
+  grid-column: 1 / -1;
+}/* ===== NUEVO DISEÑO DE CARTAS POR CUATRIMESTRE ===== */
+.pl-desktop-table-section {
+  display: none;
+  padding: 80px 20px;
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+.pl-quarters-grid-desktop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pl-quarter-card-desktop {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border-top: 5px solid #3498db;
+}
+
+.pl-quarter-card-desktop:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.pl-quarter-header-desktop {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e8f4ff;
+}
+
+.pl-quarter-title-desktop {
+  color: #2c3e50;
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.pl-quarter-uac-desktop {
+  background-color: #3498db;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: 'Havana', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.pl-subjects-grid-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pl-subject-category-desktop {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+}
+
+.pl-subject-item-desktop {
+  padding: 12px 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-family: 'Havana', sans-serif;
+  transition: all 0.2s ease;
+  border-left: 3px solid #3498db;
+}
+
+.pl-subject-item-desktop:hover {
+  background-color: #e8f4ff;
+  transform: translateX(5px);
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Versión desktop para la tabla */
+@media (min-width: 1024px) {
+  .pl-mobile-table-section {
+    display: none;
+  }
+  
+  .pl-desktop-table-section {
+    display: block;
+  }
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 1023px) {
+  .pl-desktop-table-section {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   /* Animaciones más rápidas en móvil */
   .pl-section, .pl-feature-card, .pl-quarter-card, .pl-step {
@@ -410,6 +740,35 @@
     padding: 10px 25px;
     font-size: 1rem;
   }
+  
+  /* Tabla móvil */
+  .pl-quarter-selector {
+    gap: 5px;
+  }
+  
+  .pl-quarter-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .pl-quarter-card {
+    padding: 15px;
+  }
+  
+  .pl-quarter-card-title {
+    font-size: 1.3rem;
+  }
+  
+  /* Tabla de escritorio */
+  .pl-table-section {
+    padding: 50px 15px;
+  }
+  
+  .pl-studies-table th,
+  .pl-studies-table td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
 }
 
 /* Pequeñas animaciones para touch */
@@ -425,5 +784,101 @@
   
   .pl-cta-btn:active {
     background-color: var(--accent-color) !important;
+  }
+}
+
+/* Tabla de escritorio */
+.pl-desktop-table-section {
+  display: none;
+  padding: 80px 20px;
+  background-color: rgba(245, 245, 245, 0.9);
+  overflow-x: auto;
+}
+
+.pl-table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.pl-studies-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.pl-studies-table th {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+}
+
+.pl-studies-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Havana', sans-serif;
+}
+
+.pl-studies-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pl-studies-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.pl-studies-table tr:hover {
+  background-color: #f0f8ff;
+}
+
+.area-title {
+  font-weight: bold;
+  background-color: #e8f4ff;
+  font-family: 'Georgia', serif;
+}
+
+.area-title td {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 15px;
+}
+
+.uac-total {
+  font-weight: bold;
+  text-align: center;
+  background-color: #e8f4ff;
+}
+
+.pl-studies-table td:not(:first-child) {
+  text-align: center;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Versión desktop para la tabla */
+@media (min-width: 1024px) {
+  .pl-mobile-table-section {
+    display: none;
+  }
+  
+  .pl-desktop-table-section {
+    display: block;
+  }
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 1023px) {
+  .pl-desktop-table-section {
+    display: none;
+  }
+  
+  .pl-mobile-table-section {
+    display: block;
   }
 }

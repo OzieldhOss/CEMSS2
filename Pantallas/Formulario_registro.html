@@ -8,18 +8,45 @@
   <link rel="stylesheet" href="Formulario_R.css">
 </head>
 <body>
-  <!-- Barra de navegación -->
-  <nav class="sticky-nav">
-    <div class="nav-container">
-      <div class="logo"><img src="logo.jpg" class="logo-cemss">CEM<span>SS</span></div>
-      <div class="nav-buttons">
-        <button class="nav-btn" onclick="window.location.href='Inicio.html'">Inicio</button>
-        <button class="nav-btn" onclick="window.location.href='Admision.html'">Admisión</button>
-        <button class="nav-btn" onclick="window.location.href='Carreras.html'">Carreras</button>
-        <button class="nav-btn" onclick="window.location.href='Contacto.html'">Contacto</button>
-      </div>
+    <div class="content-overlay">
+   <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="logo_white.png" alt="Logo CEMSS" class="logo-cemss">
+      <span class="logo-text">CEM<span class="logo-highlight">SS</span></span>
     </div>
-  </nav>
+    
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú de navegación" id="mobileMenuBtn">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    
+    <!-- Menú principal (visible en desktop) -->
+    <div class="nav-buttons desktop-menu">
+       <a href="Inicio.html">
+      <button class="nav-btn" id="login-btn">Inicio</button>
+      </a>
+      <a href="Inf_admision.html">
+      <button class="nav-btn" id="login-btn">Admisiones</button>
+      </a>
+      <a href="plan_estudios.html">
+      <button class="nav-btn" id="plan-btn">Plan de Estudios</button>
+      </a>
+    </div>
+    
+    <!-- Menú móvil (solo muestra Alumnos/Maestros) -->
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Botones principales (como en desktop) -->
+        <a href="Inf_admision.html" class="mobile-menu-item">Admisiones</a>
+        <a href="plan_estudios.html" class="mobile-menu-item">Plan de Estudios</a>
+      <a href="Formulario_Alumnos.html" class="mobile-menu-item">Alumnos</a>
+      <a href="Formulario_Maestro.html" class="mobile-menu-item">Maestros</a>
+    </div>
+  </div>
+</nav>  
+  </div>
 
   <!-- Contenido principal -->
   <div class="dashboard-container">
@@ -163,15 +190,6 @@
       <span class="file-status">Sin archivo seleccionado</span>
     </div>
   </div>
-  
-  <!-- INE -->
-  <div class="document-item">
-    <label for="ine">Copia de INE* <span class="hint-text">(Si eres menor de edad, copia de la INE de tu tutor)</span></label>
-    <div class="file-upload">
-      <input type="file" id="ine" name="ine" accept=".pdf,.jpg,.png" required>
-      <span class="file-status">Sin archivo seleccionado</span>
-    </div>
-  </div>
 </fieldset>
         
         <!-- Sección de Términos y Condiciones -->
@@ -179,12 +197,23 @@
           <div class="form-group full-width">
             <div class="checkbox-group">
               <input type="checkbox" id="terminos" name="terminos" class="input-checkbox" required>
-              <label for="terminos">Acepto los <a href="#">términos y condiciones</a> y autorizo el tratamiento de mis datos personales*</label>
+              <label for="terminos">Acepto los <a href="Aviso_privacidad.html">Aviso de privacidad</a> y autorizo el tratamiento de mis datos personales*</label>
               <span class="error-message">Debes aceptar los términos y condiciones</span>
             </div>
           </div>
         </fieldset>
         
+         <!-- Sección de Términos y Condiciones -->
+        <fieldset class="form-section">
+          <div class="form-group full-width">
+            <div class="checkbox-group">
+              <input type="checkbox" id="terminos" name="terminos" class="input-checkbox" required>
+              <label for="terminos">Acepto los <a href="Terminos.html">términos y condiciones</a></label>
+              <span class="error-message">Debes aceptar los términos y condiciones</span>
+            </div>
+          </div>
+        </fieldset>
+
         <!-- Botones de envío -->
         <div class="form-actions">
           <button type="reset" class="form-btn secondary">Limpiar Formulario</button>

@@ -14,6 +14,8 @@
   --adm-alert: #e53e3e;
   --transition: all 0.3s ease;
   --border-radius: 8px;
+    --title-font: 'Georgia', serif;
+    --text-font: 'Havana', sans-serif;
 }
 
 /* Base reset */
@@ -460,4 +462,55 @@ body {
     margin-top: 0.5rem;
     align-self: flex-end;
   }
+}
+
+/* Aplicar Georgia a todos los títulos */
+.adm-hero-title,
+.adm-section-title,
+.adm-benefit-card h3,
+.adm-step-title,
+.adm-docs-title,
+.adm-quarter-title,
+.adm-faq-card h3,
+.testimonial-card strong,
+.footer-section h3 {
+    font-family: var(--title-font);
+    font-weight: 700;
+}
+
+/* Aplicar Havana al resto del texto */
+body,
+.adm-hero-subtitle,
+.feature-item span,
+.adm-section-description,
+.adm-benefit-card p,
+.adm-step-text,
+.adm-step-duration,
+.adm-docs-list,
+.adm-quarter-dates,
+.quarter-stats span,
+.adm-quarter-status,
+.adm-faq-card p,
+.testimonial-content p,
+.testimonial-author span,
+.contact-info p,
+.footer-links,
+.copyright p,
+.legal-links {
+    font-family: var(--text-font);
+}
+
+/* Elementos específicos de navegación */
+.logo-text,
+.nav-btn,
+.mobile-menu-item,
+.dropdown-item {
+    font-family: var(--text-font);
+}
+
+/* Botones */
+.adm-cta-button,
+.adm-step-button,
+.adm-quarter-button {
+    font-family: var(--text-font);
 }
