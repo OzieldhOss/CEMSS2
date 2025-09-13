@@ -1,10 +1,8 @@
 /* Estilos base */
 :root {
   --title-font: 'Georgia', serif;
-  --text-font: 'Havana', sans-serif;
-  --primary-color: #4caf50;
-  --secondary-color: #2196f3;
-  --accent-color: #ff5722;
+  --text-font: 'Arial', sans-serif;
+  --accent-color: #2980b9;
   --light-gray: #f5f5f5;
   --border-color: #ddd;
   --progression-color: #9c27b0;
@@ -12,6 +10,10 @@
   --heading-color: #3f51b5;
   --textarea-color: #ff9800;
   --image-color: #e91e63;
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --boton-color: #3498db00;
+  --white: #ffffff;
 }
 
 * {
@@ -25,7 +27,8 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  overflow: hidden;
+  overflow: auto;
+  padding-top: 80px; 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,11 +42,8 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 250px 1fr 200px;
   gap: 20px;
   padding: 20px;
-  max-width: none; /* ← Eliminar la limitación */
-  margin: 0;
   height: 100vh;
   width: 100%;
-  min-height: 100%;
   box-sizing: border-box;
 }
 
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   border-radius: 8px;
   padding: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
 }
 
@@ -95,15 +95,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%; 
-  min-width: 100%; 
-  flex: 1 1 auto;
+  width: 100%;
   box-sizing: border-box;
-  overflow: hidden; /* ← Contener elementos hijos */
+  overflow-y: auto;
 }
 
 .form-preview-header {
@@ -141,78 +139,68 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-/* Estilos para el contenedor de la cuadrícula */
+/* Contenedor de la cuadrícula - MODIFICADO */
 .form-grid-container {
   flex-grow: 1;
-  overflow: auto;
-  padding: 10px;
+  overflow-x: hidden;
   width: 100%;
-  min-width: 100%;
   box-sizing: border-box;
-}
-
-/* ESTILOS CORREGIDOS PARA GRIDSTACK */
-.grid-stack {
-  background: #f9f9f9;
-  border-radius: 20px;
-  padding: 10px;
-  width: 100% !important;
-  height: auto;
   position: relative;
-  box-sizing: border-box;
-  min-height: 100%;
+  background: #f9f9f9;
+  border-radius: 8px;
   border: 1px solid #e0e0e0;
-  max-width: none !important;
-  min-width: 100% !important;
+  min-height: 500px;
+  max-height: 100%; /* <- Importante */
 }
 
-/* Líneas de cuadrícula (6 columnas × filas de 80px) */
-.grid-stack::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px);
-  background-size: calc(100% / 6) 80px;
-  pointer-events: none;
-  border-radius: 20px;
-  z-index: 1;
+/* ESTILOS CORREGIDOS PARA GRIDSTACK - MODIFICADO */
+.grid-stack {
+  background: transparent;
+  width: 100% !important;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 300px;
+  position: relative;
+  padding: 0;
+  /* Cambiamos a min-height para que crezca con el contenido */
+  min-height: 100%;
+  padding-bottom: 30px;
 }
 
-/* Items */
+/* Items - MODIFICADO para mejor manejo de altura */
 .grid-stack-item {
-  position: absolute;
+  position: absolute !important; 
   cursor: move;
   z-index: 2;
-  /* Permitir crecimiento horizontal */
-  min-width: 100px !important;
-  max-width: none !important;
+  width: 100% !important;
+  left: 0 !important;
+  margin-bottom: 15px;
+  transform: none !important;
 }
 
-/* Contenido */
+/* Contenido - MODIFICADO para mejor scroll */
 .grid-stack-item-content {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  overflow: hidden;
+  height: auto !important;
+  overflow: visible;
   box-sizing: border-box;
   border-left: 4px solid var(--secondary-color);
   z-index: 2;
   position: relative;
+  width: 100% !important;
+  min-height: 80px;
 }
 
 /* Asegurar que los elementos del formulario ocupen todo el espacio disponible */
 .grid-stack-item-content > .form-item-header,
 .grid-stack-item-content > .form-item-content {
   width: 100%;
+  flex: 1;
 }
 
 /* Eliminar márgenes que puedan causar problemas */
@@ -382,7 +370,8 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-color: var(--secondary-color);
 }
 
-.add-option-btn, .add-pair-btn {
+.add-option-btn,
+.add-pair-btn {
   background-color: #e3f2fd;
   color: var(--secondary-color);
   border: none;
@@ -393,7 +382,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5px;
 }
 
-.add-option-btn:hover, .add-pair-btn:hover {
+.add-option-btn:hover,
+.add-pair-btn:hover {
   background-color: #bbdefb;
 }
 
@@ -424,7 +414,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 8px;
 }
 
-.subtitle-text:focus, .heading-text:focus {
+.subtitle-text:focus,
+.heading-text:focus {
   outline: none;
   border-bottom: 1px solid var(--border-color);
 }
@@ -504,7 +495,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   border-radius: 8px;
   padding: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
 }
 
@@ -562,37 +553,24 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-/* Estilos para los manejadores de redimensionamiento de GridStack */
-.grid-stack-item .ui-resizable-handle {
-  z-index: 10; /* Mayor que los items */
+/* Ocultar handles de redimensionamiento horizontal */
+.ui-resizable-e, .ui-resizable-w, .ui-resizable-se, .ui-resizable-sw, .ui-resizable-ne, .ui-resizable-nw {
+  display: none !important;
 }
 
-.grid-stack-item .ui-resizable-se {
-  cursor: se-resize;
-  width: 16px; /* Más grande */
-  height: 16px; /* Más grande */
-  right: -8px;
-  bottom: -8px;
-  background: var(--secondary-color);
-  z-index: 11;
-  border-radius: 50%; /* Mejor visibilidad */
+/* Solo mostrar handle de redimensionamiento sur (vertical) */
+.ui-resizable-s {
+  height: 10px !important;
+  bottom: -5px !important;
+  background: rgba(33, 150, 243, 0.5) !important;
+  border-radius: 4px !important;
+  cursor: s-resize !important;
 }
 
-.grid-stack-item .ui-resizable-e {
-  cursor: e-resize;
-  width: 12px; /* Más ancho para mejor UX */
-  right: -6px;
-  top: 0;
-  height: 100%;
-  background: rgba(33, 150, 243, 0.1); /* Visible pero sutil */
-}
-
-.grid-stack-item .ui-resizable-s {
-  cursor: s-resize;
-  height: 7px;
-  bottom: -5px;
-  width: 100%;
-  left: 0;
+/* Asegurar que los elementos sean visibles durante el drag & drop */
+.grid-stack-item.ui-draggable-dragging {
+  z-index: 9999 !important;
+  opacity: 0.8 !important;
 }
 
 /* Responsive */
@@ -600,7 +578,7 @@ h1, h2, h3, h4, h5, h6 {
   .form-creator-container {
     grid-template-columns: 1fr;
   }
-  
+
   .form-options-panel,
   .form-actions-panel {
     display: none;
@@ -619,4 +597,183 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   width: 80%;
   z-index: 1;
+}
+/* ===== NAV-BAR GENERAL ===== */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.logo-highlight {
+  color: var(--primary-color);
+}
+
+.logo-cemss {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== BOTONES DE NAVEGACIÓN ===== */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-btn {
+  padding: 8px 20px;
+  background-color: var(--boton-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.nav-btn:hover {
+  background-color: var(--accent-color);
+}
+
+/* ===== MENÚ HAMBURGUESA (MÓVIL) ===== */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 30px;
+  z-index: 1001;
+}
+
+.menu-line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: var(--transition);
+}
+
+/* Botón hamburguesa activo */
+.mobile-menu-btn.active .menu-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-btn.active .menu-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active .menu-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: var(--secondary-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  color: var(--white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #192a3b;
+}
+
+/* ===== MENÚ MÓVIL ===== */
+.mobile-menu {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: var(--secondary-color);
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 1001;
+  overflow: hidden;
+}
+
+.mobile-menu.active {
+  display: flex;
+  animation: fadeIn 0.3s;
+}
+
+.mobile-menu-item {
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.mobile-menu-item:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* Animación del menú */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
